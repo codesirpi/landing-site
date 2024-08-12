@@ -28,9 +28,9 @@ const services = [
 
 export const ServiceProviderSection = () => {
    return (
-    <div className="flex flex-col bg-white w-full items-center justify-center">
-        <div className='my-6 text-violet-700 font-medium lg:text-xl'>What we do?</div>
-        <div className="flex justify-center items-center flex-col lg:font-extrabold font-bold lg:text-3xl text-wrap sm:text-sm text-grey-700 ">
+    <div className="flex flex-col bg-white w-full items-center justify-center px-2">
+        <div className='my-6 text-violet-700 font-medium text-xl '>What we do?</div>
+        <div className="flex justify-center items-center flex-col lg:font-extrabold font-bold lg:text-3xl text-wrap sm:text-xl text-grey-700 ">
             Expertly crafting and designing solutions that
             <div className=''>meet your needs</div>
         </div>

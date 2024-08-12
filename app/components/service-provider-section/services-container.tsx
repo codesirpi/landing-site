@@ -23,8 +23,8 @@ export const ServiceContainer = ({ image, title, description, isCardIsEven} : Se
         </div>
         {/*description and title section*/}
         <div className="flex flex-col justify-center ml-14  text-grey-500">
-            <h5 className='text-4xl font-bold text-black py-4'>Web Design</h5>
-            <div className="flex w-[60%] font-medium text-xl">
+            <h5 className='text-xl lg:text-4xl font-bold text-black py-4'>{title}</h5>
+            <div className="flex w-full md:w-[60%] lg:w-[60%] font-medium text-xl">
                 Enhance your digital presence
                 quickly with high quality website
             </div>
