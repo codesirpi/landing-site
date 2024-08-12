@@ -1,10 +1,11 @@
 import React from 'react';
+import Image from "next/image";
 
 import { ServiceContainer } from './services-container';
 import WebDesignSVG from "../../assets/service-provider-sections/web-design.svg";
 import MVPBuilderSVG from "../../assets/service-provider-sections/mvp-builder.svg";
 import DataVisualizationSVG from "../../assets/service-provider-sections/data-visualization.svg";
-
+import WaveImage from "../../assets/wave.svg";
 
 const services = [
     {
@@ -28,12 +29,13 @@ const services = [
 
 export const ServiceProviderSection = () => {
    return (
-    <div className="flex flex-col bg-white w-full items-center justify-center px-2">
-        <div className='my-6 text-violet-700 font-medium text-xl '>What we do?</div>
-        <div className="flex justify-center items-center flex-col lg:font-extrabold font-bold lg:text-3xl text-wrap sm:text-xl text-grey-700 ">
-            Expertly crafting and designing solutions that
-            <div className=''>meet your needs</div>
-        </div>
+    <div className="flex flex-col w-full">
+        <div className="flex flex-col bg-white w-full items-center justify-center px-2">
+            <div className='my-6 text-violet-700 font-medium text-xl '>What we do?</div>
+                 <div className="flex justify-center items-center flex-col lg:font-extrabold font-bold lg:text-3xl text-wrap sm:text-xl text-grey-700 ">
+                    Expertly crafting and designing solutions that
+                <div className=''>meet your needs</div>
+            </div>
 
         {/* show Projects provider component */}
         <div className="grid grid-cols-1 items-center my-8">
@@ -43,7 +45,11 @@ export const ServiceProviderSection = () => {
                 ))
             }
         </div>
-        
+    </div>
+
+    <div className='flex w-full'>
+        <Image src={WaveImage} alt="wave"/>
+    </div>
     </div>
    )
 }
