@@ -1,5 +1,7 @@
 import { Icon } from "@iconify/react/dist/iconify.js";
+import Image from "next/image";
 import React from "react";
+import test from "../../assets/contact-section/logo.png";
 
 type MockData = {
   rating: number;
@@ -10,7 +12,7 @@ type MockData = {
   Company: string;
 };
 
-const Testimonal = ({mockData}: {mockData:MockData[]}) => {
+const Testimonal = ({ mockData }: { mockData: MockData[] }) => {
   return (
     <div className="flex justify-center">
       <div className="flex gap-x-8  w-full h-fit my-20 max-w-[1145px]">
@@ -29,15 +31,25 @@ const Testimonal = ({mockData}: {mockData:MockData[]}) => {
                   color="#FF520E"
                 />
               ))}
+              {Array.from({ length: 5 - data.rating }, (_, i) => (
+                <Icon
+                  icon="material-symbols:star"
+                  width={14}
+                  height={14}
+                  key={i}
+                  color="#5C5C5C"
+                />
+              ))}
             </div>
             <div className="text-xl">{data.comment}</div>
             <div className="flex items-center gap-x-5">
-              <img
-                src={
-                  "https://st.depositphotos.com/2218212/2938/i/950/depositphotos_29387653-stock-photo-facebook-profile.jpg"
-                }
-                className="w-7 h-7 rounded-full"
+              <Image
+                src="https://st.depositphotos.com/2218212/2938/i/950/depositphotos_29387653-stock-photo-facebook-profile.jpg"
+                width={28}
+                height={28}
+                unoptimized
                 alt="profile-photo"
+                className="w-7 h-7 rounded-full"
               />
               <div className="text-sm">
                 <div>{data.profileName}</div>

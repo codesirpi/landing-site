@@ -15,7 +15,7 @@ const ReviewsSection = () => {
       Company: "UrbanCore",
     },
     {
-      rating: 4,
+      rating: 3,
       comment: "The landing page design exceeded our expectations",
       profilePicture:
         "https://st.depositphotos.com/2218212/2938/i/950/depositphotos_29387653-stock-photo-facebook-profile.jpg",
