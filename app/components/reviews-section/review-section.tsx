@@ -35,7 +35,7 @@ const ReviewsSection = () => {
   ];
 
   return (
-    <div className="linear-grey-gradient w-full h-fit">
+    <div className="linear-grey-gradient w-full h-fit text-white">
       <div className="text-center mt-14 mx-4">
         <div className="text-5xl font-light">Our Results</div>
         <div className="text-lg text-grey-200 font-thin pt-4">

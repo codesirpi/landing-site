@@ -5,7 +5,7 @@ import "../../globals.css";
 
 const contactSection = () => {
   return (
-    <div className="bg-[background-black] w-full h-fit">
+    <div className="bg-background-black w-full h-fit text-white">
       <div className="mt-12 text-center">
         <Image
           src={logo}
