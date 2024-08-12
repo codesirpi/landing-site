@@ -21,7 +21,7 @@ const TeamMemberDetailsCard: React.FC<TeamMemberCardProps> = ({
         </div>
         <div className="p-6 flex flex-col items-center gap-2">
           <span className=" font-semibold">{name}</span>
-          <span>{role}</span>
+          <span className="text-grey-500">{role}</span>
           <Image
             src={instaIcon}
             width={25}
