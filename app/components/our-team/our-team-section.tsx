@@ -26,8 +26,8 @@ const teamMemberDetails = [
 
 const OurTeamSection: React.FC = () => {
   return (
-    <section className="container mx-8">
-      <div className="w-[1200px] h-[930px] ">
+    <section>
+      <div className="w-full h-[930px] ">
         <div className="flex flex-col items-center">
           <span className="text-lg md:text-3xl font-bold">Our Team</span>
           <div className="w-[400px] h-[72px] ">
