@@ -22,7 +22,7 @@ const contactSection = () => {
         Let&#39;s talk about your project
       </div>
       <div className="w-full flex flex-col items-center justify-center">
-        <div className="w-full max-w-[670px] flex gap-x-5">
+        <div className="w-full max-w-[670px] flex gap-x-5 px-4">
           <input
             className=" placeholder:text-grey-600 bg-input-box rounded-[28px] h-14 w-[100%] px-5"
             placeholder="Your Name"
@@ -32,10 +32,13 @@ const contactSection = () => {
             placeholder="Your Email Address"
           />
         </div>
-        <textarea
-          className="placeholder:text-grey-600 bg-input-box border-0 rounded-[28px] max-w-[670px] h-32 w-[100%] px-5 py-2 mt-16"
-          placeholder="Please tell us a brief about your project"
-        />
+        <div className="w-full max-w-[670px] px-4">
+          <textarea
+            className="placeholder:text-grey-600 bg-input-box border-0 rounded-[28px]  h-32 w-[100%] px-5 py-2 mt-16"
+            placeholder="Please tell us a brief about your project"
+          />
+        </div>
+
         <button className="bg-[#222222] py-2 px-3.5 mt-10">Submit</button>
       </div>
       <div className="text-xl font-medium text-center mt-20 mb-12 text-grey-400 ">

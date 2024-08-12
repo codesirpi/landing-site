@@ -15,7 +15,7 @@ const ReviewsSection = () => {
       Company: "UrbanCore",
     },
     {
-      rating: 3,
+      rating: 4,
       comment: "The landing page design exceeded our expectations",
       profilePicture:
         "https://st.depositphotos.com/2218212/2938/i/950/depositphotos_29387653-stock-photo-facebook-profile.jpg",
@@ -31,6 +31,15 @@ const ReviewsSection = () => {
       profileName: "Max",
       designation: "Head of Design",
       Company: "Fabrics",
+    },
+    {
+      rating: 2,
+      comment: "Need to be Better",
+      profilePicture:
+        "https://st.depositphotos.com/2218212/2938/i/950/depositphotos_29387653-stock-photo-facebook-profile.jpg",
+      profileName: "Peter",
+      designation: "Founder",
+      Company: "Uber",
     },
   ];
 

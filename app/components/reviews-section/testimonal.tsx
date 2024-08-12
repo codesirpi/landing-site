@@ -15,7 +15,7 @@ type MockData = {
 const Testimonal = ({ mockData }: { mockData: MockData[] }) => {
   return (
     <div className="flex justify-center">
-      <div className="flex gap-x-8  w-full h-fit my-20 max-w-[1145px]">
+      <div className="flex gap-x-8  w-full h-fit my-20 max-w-[1145px]  mx-4 overflow-x-scroll scroll">
         {mockData.map((data: MockData, index: number) => (
           <div
             className="flex flex-col gap-y-10 max-w-[361px] w-full h-fit bg-background-black px-7 py-10"
