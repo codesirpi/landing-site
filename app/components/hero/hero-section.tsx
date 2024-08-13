@@ -7,7 +7,7 @@ import { motion } from "framer-motion";
 const HeroSection = () => {
   return (
     <div className="w-full h-[1191px] relative bg-gradient-to-b from-[#0F0F0F] flex flex-col items-center   via-[#292929] via-80% to-[#858585]  ">
-      <div className="w-full  container mx-8  h-[100px] flex items-center gap-2 ">
+      <div className="w-full    h-[100px] flex items-center gap-2 ">
         <div className="flex items-center">
           <Image
             src={logoImg}
