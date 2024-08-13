@@ -26,18 +26,16 @@ const teamMemberDetails = [
 
 const OurTeamSection: React.FC = () => {
   return (
-    <section>
-      <div className="w-full h-[930px] ">
-        <div className="flex flex-col items-center">
-          <span className="text-lg md:text-3xl font-bold">Our Team</span>
-          <div className="w-[400px] h-[72px] ">
-            <span className="text-center  flex flex-wrap text-sm  text-gray-500">
-              Just sit back and relax while we take care of your business needs
-              for you
-            </span>
+    <section className="bg-white w-full flex justify-center">
+      <div className="pb-20">
+        <div className="flex flex-col items-center gap-3">
+          <div className="text-lg md:text-3xl font-bold">Our Team</div>
+          <div className="md:w-[40%] text-center  flex flex-wrap text-sm  text-gray-500">
+            Just sit back and relax while we take care of your business needs
+            for you
           </div>
         </div>
-        <div className="w-[1069px] h-[483px] overflow-scroll z-10  scrollbar-hide gap-[10px] flex items-center">
+        <div className="lg:w-[1069px] w-screen px-10 overflow-scroll h-[483px] overflow-scroll z-10  scrollbar-hide gap-[10px] flex items-center">
           {teamMemberDetails.map((data, index) => (
             <TeamMemberDetailsCard
               key={index}

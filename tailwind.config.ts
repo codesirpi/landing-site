@@ -32,6 +32,7 @@ const config: Config = {
       },
       boxShadow: {
         xl: "-2px -4px 10px 0 #FFFFFF",
+        card: "0 5px 35px #dadada",
       },
       fontFamily: {
         leckerli: ["Leckerli One", "cursive"],
@@ -43,6 +44,7 @@ const config: Config = {
           "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
         "gradient-primary": `linear-gradient(to right, red, green)`,
         "hero-vector": "url('assets/hero/left-side-wave.svg')",
+        "white-wave": "url(assets/white-wave.svg)",
         "star-button": "url('assets/hero/button-bg.svg')",
         "hero-right-vector": "url('assets/hero/right-blue-vector.png')",
       },
