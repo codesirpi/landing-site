@@ -2,7 +2,7 @@
 import React from "react";
 import Image from "next/image";
 import logoImg from "../../assets/hero/logo.png";
-
+import startIcon from "../../assets/hero/get-started-button-star.png";
 import { motion } from "framer-motion";
 const HeroSection = () => {
   return (
@@ -21,17 +21,6 @@ const HeroSection = () => {
       </div>
 
       <div className=" absolute h-[600px]  flex flex-col items-center  justify-center px-8 gap-[10px]">
-        <motion.div
-          className="absolute top-[80%] right-[15%] transform   bg-hero-vector h-full w-full bg-cover bg-center bg-no-repeat"
-          initial={{ rotate: 0 }}
-          animate={{ rotate: 90 }}
-          transition={{
-            duration: 10,
-            repeat: Infinity,
-            ease: "linear",
-          }}
-        ></motion.div>
-
         <h1 className=" font-bold text-xl  md:text-7xl  text-center mt-20 text-white">
           We scultpure ideas to code for digital platform & experience
         </h1>
@@ -44,18 +33,28 @@ const HeroSection = () => {
         <div className="flex items-center justify-center w-[182px] h-[46px] rounded-full drop-shadow-md border-violet-400 text-white bg-star-button bg-cover bg-center bg-no-repeat  border-4">
           <button>
             <div className="flex gap-2 ">
-              {/* <Image
+              <Image
                 src={startIcon}
                 width={16}
                 height={16}
                 alt={"star image"}
-              ></Image> */}
+              ></Image>
               Get Started
             </div>{" "}
           </button>
         </div>
-        <div className="absolute top-[98%]  w-full h-full bg-hero-right-vector bg-cover bg-center bg-no-repeat"></div>
       </div>
+      <motion.div
+        className=" transform   bg-hero-vector h-full w-full bg-cover bg-center bg-no-repeat"
+        initial={{ rotate: 0 }}
+        animate={{ rotate: 90 }}
+        transition={{
+          duration: 10,
+          repeat: Infinity,
+          ease: "linear",
+        }}
+      ></motion.div>
+      <div className="  w-full h-full bg-hero-right-vector bg-cover bg-center bg-no-repeat"></div>
     </div>
   );
 };
