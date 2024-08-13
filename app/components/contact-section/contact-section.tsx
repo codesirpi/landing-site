@@ -3,10 +3,12 @@ import React from "react";
 import logo from "../../assets/contact-section/logo.png";
 import Image from "next/image";
 import "../../globals.css";
-import { useForm, ValidationError } from "@formspree/react";
 
-const contactSection = () => {
-  const [state, handleSubmit] = useForm("xrbzkrzn");
+import { useForm, ValidationError } from "@formspree/react";
+import { environment } from "@/app/environments/environment";
+
+const ContactSection = () => {
+  const [state, handleSubmit] = useForm(environment.FORMSPREE_PROJECT_ID);
 
   const [input, setInput] = React.useState({
     name: "",
@@ -82,4 +84,4 @@ const contactSection = () => {
   );
 };
 
-export default contactSection;
+export default ContactSection;
