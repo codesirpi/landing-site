@@ -31,3 +31,14 @@ body {
     text-wrap: balance;
   }
 }
+
+.linear-grey-gradient{
+  background:linear-gradient(#858585 0%,#474747 23%,#292929 41%,#0F0F0F 100%)
+}
+
+.linear-gradient-company{
+  background: linear-gradient(to left,rgba(222, 222, 222, 1) 0%,rgba(255, 255, 255, 0.62) 52%,rgba(181, 181, 181, 0.62) 100%,rgba(255, 245, 245, 0.60) 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}

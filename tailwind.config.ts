@@ -22,6 +22,7 @@ const config: Config = {
           500: "#888888",
           400: "#808080",
           300: "#AAB0BC",
+          200: "#F0F0F0",
         },
         orange: {
           600: "#FF520E",
@@ -35,6 +36,7 @@ const config: Config = {
         "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
         "gradient-conic":
           "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
+        "gradient-primary": `linear-gradient(to right, red, green)`,
         "hero-vector": "url('assets/hero/left-side-wave.svg')",
         "star-button": "url('assets/hero/button-bg.svg')",
         "hero-right-vector": "url('assets/hero/right-blue-vector.png')",
