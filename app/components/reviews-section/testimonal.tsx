@@ -2,6 +2,7 @@ import { Icon } from "@iconify/react/dist/iconify.js";
 import Image from "next/image";
 import React from "react";
 import test from "../../assets/contact-section/logo.png";
+import { motion } from "framer-motion";
 
 type MockData = {
   rating: number;
@@ -14,7 +15,18 @@ type MockData = {
 
 const Testimonal = ({ mockData }: { mockData: MockData[] }) => {
   return (
-    <div className="flex justify-center">
+    <motion.div
+      className="flex justify-center"
+      initial={{ y: 100, opacity: 0 }}
+      whileInView={{
+        y: 0,
+        opacity: 1,
+      }}
+      transition={{
+        duration: 0.6,
+      }}
+      viewport={{ once: true }}
+    >
       <div className="flex gap-x-8  w-full h-fit my-20 max-w-[1145px]  mx-4 overflow-x-scroll scroll">
         {mockData.map((data: MockData, index: number) => (
           <div
@@ -61,7 +73,7 @@ const Testimonal = ({ mockData }: { mockData: MockData[] }) => {
           </div>
         ))}
       </div>
-    </div>
+    </motion.div>
   );
 };
 
