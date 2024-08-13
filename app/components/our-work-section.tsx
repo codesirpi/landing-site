@@ -46,7 +46,7 @@ export const OurWorkSection = () => {
             <Image
               src={OurWork2}
               alt={""}
-              className="w-full h-full p-10 pb-0 container object-contain"
+              className="w-full h-full p-10 pb-0 container object-cover"
             />
             <div className="bg-[red] md:w-[450px] w-full h-14 flex justify-center items-center absolute bottom-0 rounded-b-2xl duration-100 invisible conatiner-hover:visible">
               Developed by Ajith kumar

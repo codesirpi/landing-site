@@ -15,7 +15,7 @@ const TeamMemberDetailsCard: React.FC<TeamMemberCardProps> = ({
 }) => {
   return (
     <div>
-      <div className="bg-white drop-shadow w-[275px] h-[372px] rounded-lg flex flex-col justify-center items-center gap-2">
+      <div className="bg-white shadow-card w-[275px] h-[372px] rounded-lg flex flex-col justify-center items-center gap-2">
         <div className="rounded-full w-[165px] h-[165px] ">
           <Image src={teamMember1} alt={"team member-1"}></Image>
         </div>
