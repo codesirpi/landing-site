@@ -16,16 +16,20 @@ const config: Config = {
           700: "#5E0BEF",
         },
         grey: {
+          800: "#B8B8B8",
           700: "#333333",
           650: "#545454",
           600: "#5C5C5C",
           500: "#888888",
           400: "#808080",
           300: "#AAB0BC",
+          200: "#F0F0F0",
         },
         orange: {
           600: "#FF520E",
         },
+        "background-black": "#101010",
+        "input-box": "#303030",
       },
       boxShadow: {
         xl: "-2px -4px 10px 0 #FFFFFF",
