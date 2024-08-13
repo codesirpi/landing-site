@@ -13,21 +13,19 @@ const config: Config = {
         yellow: "#FF0",
         white: "#FFF",
         violet: {
-          700: '#5E0BEF',
+          700: "#5E0BEF",
         },
         grey: {
-          700: '#333333',
-          650: '#545454',
-          600: '#5C5C5C',
+          700: "#333333",
+          650: "#545454",
+          600: "#5C5C5C",
           500: "#888888",
           400: "#808080",
           300: "#AAB0BC",
         },
         orange: {
           600: "#FF520E",
-        }
-
-
+        },
       },
       fontFamily: {
         leckerli: ["Leckerli One", "cursive"],
@@ -37,9 +35,12 @@ const config: Config = {
         "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
         "gradient-conic":
           "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
+        "hero-vector": "url('assets/hero/left-side-wave.svg')",
+        "star-button": "url('assets/hero/button-bg.svg')",
+        "hero-right-vector": "url('assets/hero/right-blue-vector.png')",
       },
     },
   },
-  plugins: [],
+  plugins: [require("tailwind-scrollbar-hide")],
 };
 export default config;
