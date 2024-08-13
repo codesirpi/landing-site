@@ -6,6 +6,8 @@ import WebDesignSVG from "../../assets/service-provider-sections/web-design.svg"
 import MVPBuilderSVG from "../../assets/service-provider-sections/mvp-builder.svg";
 import DataVisualizationSVG from "../../assets/service-provider-sections/data-visualization.svg";
 import WaveImage from "../../assets/wave.svg";
+import { motion, useInView } from 'framer-motion';
+
 
 const services = [
   {
@@ -27,8 +29,23 @@ const services = [
 
 export const ServiceProviderSection = () => {
   return (
-    <div className="flex flex-col w-full">
-      <div className="flex flex-col bg-white w-full items-center justify-center px-2">
+    <motion.div className="flex flex-col w-full">
+      <motion.div 
+      initial={{
+        y: 5,
+        opacity: 0,
+    }}
+    whileInView={{
+        y:0,
+        opacity: 1,
+    }}
+    transition={{
+        duration: 0.7,
+    }}
+    viewport={{
+        once: true
+    }}
+      className="flex flex-col bg-white w-full items-center justify-center px-2">
         <div className="my-6 text-violet-700 font-medium text-xl ">
           What we do?
         </div>
@@ -49,11 +66,11 @@ export const ServiceProviderSection = () => {
             />
           ))}
         </div>
-      </div>
+    </motion.div>
 
       <div className="flex w-full">
         <Image src={WaveImage} alt="wave" />
       </div>
-    </div>
+    </motion.div>
   );
 };
