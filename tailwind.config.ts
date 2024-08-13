@@ -16,7 +16,6 @@ const config: Config = {
           700: "#5E0BEF",
         },
         grey: {
-          800: "#B8B8B8",
           700: "#333333",
           650: "#545454",
           600: "#5C5C5C",
@@ -42,7 +41,10 @@ const config: Config = {
         "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
         "gradient-conic":
           "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
-        "white-wave": "url(assets/white-wave.svg)",
+        "gradient-primary": `linear-gradient(to right, red, green)`,
+        "hero-vector": "url('assets/hero/left-side-wave.svg')",
+        "star-button": "url('assets/hero/button-bg.svg')",
+        "hero-right-vector": "url('assets/hero/right-blue-vector.png')",
       },
     },
   },
