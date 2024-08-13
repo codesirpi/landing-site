@@ -18,7 +18,7 @@ const ContactSection = () => {
   });
 
   return (
-    <div className="bg-background-black w-full h-fit text-white border border-grey-600">
+    <div className="bg-background-black w-full h-fit text-white">
       <motion.div
         className="mt-12 text-center"
         initial={{ y: 100, opacity: 0 }}
