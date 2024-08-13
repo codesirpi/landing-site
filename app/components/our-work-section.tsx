@@ -42,13 +42,13 @@ export const OurWorkSection = () => {
         </div>
 
         <div className="w-full px-10 flex justify-center top-28 lg:top-40 absolute h-[50%] ">
-          <div className="bg-black  h-full w-[450px] rounded-2xl drop-shadow-t-md shadow-xl ">
+          <div className="bg-black  h-full md:w-[450px] w-full rounded-2xl drop-shadow-t-md shadow-xl ">
             <Image
               src={OurWork2}
               alt={""}
-              className="w-full h-full p-10 pb-0 container"
+              className="w-full h-full p-10 pb-0 container object-contain"
             />
-            <div className="bg-[red] w-[450px] h-14 flex justify-center items-center absolute bottom-0 rounded-b-2xl duration-100 invisible conatiner-hover:visible">
+            <div className="bg-[red] md:w-[450px] w-full h-14 flex justify-center items-center absolute bottom-0 rounded-b-2xl duration-100 invisible conatiner-hover:visible">
               Developed by Ajith kumar
             </div>
           </div>
