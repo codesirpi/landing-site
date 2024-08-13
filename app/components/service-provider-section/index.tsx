@@ -13,17 +13,17 @@ const services = [
   {
     title: "Web Design",
     imge: WebDesignSVG,
-    description: "",
+    description: "Enhance your digital presence quickly with high quality website",
   },
   {
     title: "MVP Builder",
     imge: MVPBuilderSVG,
-    description: "",
+    description: "Go to market with appealing minimum viable product",
   },
   {
     title: "Data Visualization",
     imge: DataVisualizationSVG,
-    description: "",
+    description: "Turn data into engaging visuals to track trends & gain insights",
   },
 ];
 
@@ -68,8 +68,8 @@ export const ServiceProviderSection = () => {
         </div>
     </motion.div>
 
-      <div className="flex w-full">
-        <Image src={WaveImage} alt="wave" />
+      <div className="flex w-full bg-blue-wave h-20 bg-cover bg-white">
+        {/* <Image src={WaveImage} alt="wave" /> */}
       </div>
     </motion.div>
   );

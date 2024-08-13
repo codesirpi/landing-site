@@ -30,7 +30,7 @@ export const ServiceContainer = ({
         x: 0,
         y:0,
         transition: {
-            duration: 2
+          duration: 2
         }
     }}
     viewport={{ once: true }}
@@ -45,12 +45,14 @@ export const ServiceContainer = ({
         <Image src={image} alt={title} className="flex fit" />
       </div>
       {/*description and title section*/}
-      <div className="flex flex-col justify-center items-center lg:items-start text-center lg:text-start text-grey-500">
+      <div className={clsx("flex flex-col justify-center items-center lg:items-start text-center lg:text-start text-grey-500 ", {
+        "lg:mx-8": !isCardIsEven
+      })}>
         <h5 className="text-xl lg:text-4xl font-bold text-black py-4">
           {title}
         </h5>
         <div className="flex  w-full text-center lg:text-start md:w-[60%] lg:w-[60%] font-medium text-xl">
-          Enhance your digital presence quickly with high quality website
+         {description}
         </div>
       </div>
     </motion.div>
