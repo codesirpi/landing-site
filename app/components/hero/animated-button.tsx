@@ -6,7 +6,7 @@ const AnimatedGetStartedButton = () => {
       width="181"
       height="40"
       viewBox="0 0 181 40"
-      fill="none"
+      fill="#5E0BEF"
       xmlns="http://www.w3.org/2000/svg"
       initial={{ opacity: 0 }}
       animate={{ opacity: [0, 5, 0] }}

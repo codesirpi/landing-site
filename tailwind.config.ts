@@ -48,7 +48,7 @@ const config: Config = {
         "hero-vector": "url('assets/hero/left-side-wave.svg')",
         "white-wave": "url(assets/white-wave.svg)",
         "star-button": "url('assets/hero/button-bg.svg')",
-        "hero-right-vector": "url('assets/hero/right-blue-vector.png')",
+        "hero-right-vector": "url('assets/hero/right-blue-vector.svg')",
         "hero-sparkle-star": "url('assets/hero/sparklestars.svg')",
         "hero-top-vector": "url('assets/hero/top-vector.png')",
       },

@@ -19,15 +19,17 @@ const HeroSection = () => {
           ></Image>
         </div>
 
-        <span className="text-white text-[32px] font-semibold">Code Sirpi</span>
+        <span className="text-white  text-[32px] font-semibold">
+          Code Sirpi
+        </span>
       </div>
 
       <div className="absolute w-full z-20 h-full bg-cover bg-center bg-no-repeat">
         <AnimatedSparkleSvg />
       </div>
 
-      <div className=" absolute h-[600px] z-20  flex flex-col items-center  justify-center px-8 gap-[10px]">
-        <h1 className=" font-bold text-xl  md:text-7xl  text-center mt-20 text-white">
+      <div className=" absolute h-[600px]  z-20  flex flex-col items-center  justify-center px-8 gap-[10px]">
+        <h1 className=" font-bold text-xl  md:text-7xl  bg-gradient-to-b from-[#C0BFFF]  to-white bg-clip-text text-transparent text-center mt-20 text-white">
           We scultpure ideas to code for digital platform & experience
         </h1>
         <div className=" h-[50px]">
