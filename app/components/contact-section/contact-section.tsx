@@ -1,9 +1,20 @@
+"use client";
 import React from "react";
 import logo from "../../assets/contact-section/logo.png";
 import Image from "next/image";
 import "../../globals.css";
+import { useForm, ValidationError } from '@formspree/react';
+
 
 const contactSection = () => {
+  const [state, handleSubmit] = useForm("xrbzkrzn");
+
+  const [input, setInput] = React.useState({
+    name: '',
+    email: '',
+    message: '',
+  })
+
   return (
     <div className="bg-[background-black] w-full h-fit">
       <div className="mt-12 text-center">
@@ -26,17 +37,43 @@ const contactSection = () => {
           <input
             className=" placeholder:text-grey-600 bg-input-box rounded-[28px] h-14 w-[100%] px-5"
             placeholder="Your Name"
+            value={input.name}
+            onChange={(e) => {
+              setInput({ ...input, name: e.target.value });
+            }}
           />
           <input
+            id="email"
             className="placeholder:text-grey-600 bg-input-box rounded-[28px] h-14 w-[100%] px-5"
             placeholder="Your Email Address"
+            value={input.email}
+            onChange={(e) => {
+              setInput({ ...input, email: e.target.value });
+            }}
+          />
+          <ValidationError 
+            prefix="Email" 
+            field="email"
+            errors={state.errors}
           />
         </div>
         <textarea
           className="placeholder:text-grey-600 bg-input-box border-0 rounded-[28px] max-w-[670px] h-32 w-[100%] px-5 py-2 mt-16"
+          id="message"
           placeholder="Please tell us a brief about your project"
+          onChange={(e) => {
+            setInput({ ...input, message: e.target.value });
+          }}
         />
-        <button className="bg-[#222222] py-2 px-3.5 mt-10">Submit</button>
+        <ValidationError 
+            prefix="Message" 
+            field="message"
+            errors={state.errors}
+        />
+
+        <button disabled={state.submitting} onClick={ () => handleSubmit({
+          ...input
+        })} className="bg-[#222222] py-2 px-3.5 mt-10">Submit</button>
       </div>
       <div className="text-xl font-medium text-center mt-20 mb-12 text-grey-400 ">
         2024 CodeSirpi Software LLP

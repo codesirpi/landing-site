@@ -9,6 +9,7 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@formspree/react": "^2.5.1",
     "@iconify/react": "^5.0.2",
     "next": "14.2.5",
     "react": "^18",
