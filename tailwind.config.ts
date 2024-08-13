@@ -16,7 +16,6 @@ const config: Config = {
           700: "#5E0BEF",
         },
         grey: {
-          800: "#B8B8B8",
           700: "#333333",
           650: "#545454",
           600: "#5C5C5C",
@@ -29,7 +28,11 @@ const config: Config = {
           600: "#FF520E",
         },
         "background-black": "#101010",
-        "input-box": "#303030"
+        "input-box": "#303030",
+      },
+      boxShadow: {
+        xl: "-2px -4px 10px 0 #FFFFFF",
+        card: "0 5px 35px #dadada",
       },
       fontFamily: {
         leckerli: ["Leckerli One", "cursive"],
@@ -40,6 +43,10 @@ const config: Config = {
         "gradient-conic":
           "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
         "gradient-primary": `linear-gradient(to right, red, green)`,
+        "hero-vector": "url('assets/hero/left-side-wave.svg')",
+        "white-wave": "url(assets/white-wave.svg)",
+        "star-button": "url('assets/hero/button-bg.svg')",
+        "hero-right-vector": "url('assets/hero/right-blue-vector.png')",
       },
     },
   },
