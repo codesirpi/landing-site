@@ -27,6 +27,11 @@ const config: Config = {
         orange: {
           600: "#FF520E",
         },
+        "background-black": "#101010",
+        "input-box": "#303030",
+      },
+      boxShadow: {
+        xl: "-2px -4px 10px 0 #FFFFFF",
       },
       fontFamily: {
         leckerli: ["Leckerli One", "cursive"],
@@ -40,6 +45,7 @@ const config: Config = {
         "hero-vector": "url('assets/hero/left-side-wave.svg')",
         "star-button": "url('assets/hero/button-bg.svg')",
         "hero-right-vector": "url('assets/hero/right-blue-vector.png')",
+        "white-wave": "url(assets/white-wave.svg)",
       },
     },
   },
