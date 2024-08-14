@@ -43,6 +43,9 @@ body {
 .text-gradient {
   background: linear-gradient(#c0bfff 100%, #ffffff 90%);
 }
+.logo-text-gradient {
+  background: linear-gradient(#000000 75%, #ffffff 90%);
+}
 .get-started-button-gradient {
   background: linear-gradient(#122837 0%, #5e0bef 100%);
 }
@@ -53,9 +56,6 @@ body {
     #474747 100%,
     #858585 100%
   );
-  -webkit-background-clip: text;
-  background-clip: text;
-  color: transparent;
 }
 
 .linear-gradient-company {

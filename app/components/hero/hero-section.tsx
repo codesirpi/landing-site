@@ -19,7 +19,9 @@ const HeroSection = () => {
           ></Image>
         </div>
 
-        <span className="text-white  text-[32px] font-semibold">CodeSirpi</span>
+        <span className="text-white  text-[32px] font-semibold linear-gradient-company">
+          CodeSirpi
+        </span>
       </div>
 
       <div className="absolute w-full top-4 left-4 z-20 h-full bg-cover bg-center bg-no-repeat">
@@ -61,8 +63,8 @@ const HeroSection = () => {
           ease: "linear",
         }}
       ></motion.div>
-      <div className="absolute z-20 left-0 opacity-80   top-0 w-full h-full bg-hero-right-vector bg-cover bg-center bg-no-repeat"></div>
-      <div className="absolute z-10 left-0 opacity-30 -top-[23rem] w-full h-full  bg-hero-top-vector bg-cover bg-center bg-no-repeat"></div>
+      <div className="absolute z-20 left-0 opacity-60   top-0 w-full h-full bg-hero-right-vector bg-cover bg-center bg-no-repeat"></div>
+      <div className="absolute z-10 left-0 opacity-80  -top-[23rem] w-full h-full  bg-hero-top-vector bg-cover bg-center bg-no-repeat"></div>
     </div>
   );
 };
