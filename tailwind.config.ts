@@ -45,11 +45,15 @@ const config: Config = {
         "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
         "gradient-conic":
           "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
+        "custom-gradient":
+          "linear-gradient(180deg, #0F0F0F, #292929,#474747,#858585)",
         "hero-vector": "url('assets/hero/left-side-wave.svg')",
         "white-wave": "url(assets/white-wave.svg)",
         "blue-wave": "url(assets/wave.svg)",
         "star-button": "url('assets/hero/button-bg.svg')",
-        "hero-right-vector": "url('assets/hero/right-blue-vector.png')",
+        "hero-right-vector": "url('assets/hero/right-blue-vector.svg')",
+        "hero-sparkle-star": "url('assets/hero/sparklestars.svg')",
+        "hero-top-vector": "url('assets/hero/top-vector.png')",
       },
     },
   },

@@ -1,5 +1,7 @@
+"use client";
 import React from "react";
 import Image from "next/image";
+import { motion } from "framer-motion";
 import teamMember1 from "../../assets/team-members/team-member-1.jpg";
 import teamMember2 from "../../assets/team-members/teamMember2.png";
 import instaIcon from "../../assets/team-members/instagram-Icon.png";
@@ -13,9 +15,18 @@ const TeamMemberDetailsCard: React.FC<TeamMemberCardProps> = ({
   role,
   Imagepath,
 }) => {
+  const spring = {
+    type: "spring",
+    damping: 10,
+    stiffness: 100,
+  };
   return (
     <div>
-      <div className="bg-white shadow-card w-[275px] h-[372px] rounded-lg flex flex-col justify-center items-center gap-2">
+      <motion.div
+        className="bg-white shadow-card w-[275px] h-[372px] rounded-lg flex flex-col justify-center items-center gap-[10px]"
+        transition={spring}
+        whileTap={{ scale: 2.05 }}
+      >
         <div className="rounded-full w-[165px] h-[165px] ">
           <Image src={teamMember1} alt={"team member-1"}></Image>
         </div>
@@ -29,7 +40,7 @@ const TeamMemberDetailsCard: React.FC<TeamMemberCardProps> = ({
             alt="Instagram Icon"
           ></Image>
         </div>
-      </div>
+      </motion.div>
     </div>
   );
 };
