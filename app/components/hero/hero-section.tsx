@@ -31,9 +31,10 @@ const HeroSection = () => {
       </div>
 
       <div className=" mt-20 absolute h-[620px] lg:w-[1187px] z-20  flex flex-col items-center  justify-center  gap-[10px]">
-        <h1 className=" font-bold text-xl  md:text-7xl  bg-gradient-to-b  from-[#C0BFFF]  to-white bg-clip-text text-transparent text-center  text-white">
-          We scultpure ideas to code for digital platform & experience
-        </h1>
+        <span className=" font-bold text-xl md:text-7xl  text-center text-gradient  ">
+          We scultpure ideas to code for&nbsp;
+          <span className="text-white">digital platform & experience</span>
+        </span>
         <div className=" h-[50px]">
           <motion.span className="text-grey-400 text-center flex px-8">
             <span>Your partner for&nbsp;</span>

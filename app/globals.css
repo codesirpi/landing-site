@@ -42,6 +42,9 @@ body {
 }
 .text-gradient {
   background: linear-gradient(#c0bfff 100%, #ffffff 90%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
 }
 .logo-text-gradient {
   background: linear-gradient(#000000 75%, #ffffff 90%);
