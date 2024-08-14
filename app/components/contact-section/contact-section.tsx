@@ -45,7 +45,7 @@ const ContactSection = () => {
         </div>
       </motion.div>
       <motion.div
-        className="my-8 text-center text-2xl  text-grey-800 sm:text-3xl lg:text-5xl"
+        className="my-8 text-center text-xl text-grey-800 xs:text-2xl sm:text-3xl lg:text-5xl"
         initial={{ y: 100, opacity: 0 }}
         whileInView={{
           y: 0,
