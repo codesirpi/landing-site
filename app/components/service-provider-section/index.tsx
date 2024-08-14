@@ -6,7 +6,7 @@ import WebDesignSVG from "../../assets/service-provider-sections/web-design.svg"
 import MVPBuilderSVG from "../../assets/service-provider-sections/mvp-builder.svg";
 import DataVisualizationSVG from "../../assets/service-provider-sections/data-visualization.svg";
 import WaveImage from "../../assets/wave.svg";
-import { motion, useInView } from 'framer-motion';
+import { motion } from 'framer-motion';
 
 
 const services = [
@@ -29,7 +29,7 @@ const services = [
 
 export const ServiceProviderSection = () => {
   return (
-    <motion.div className="flex flex-col w-full">
+    <div className="flex flex-col w-full pt-20 bg-white">
       <motion.div 
       initial={{
         y: 5,
@@ -55,7 +55,7 @@ export const ServiceProviderSection = () => {
         </div>
 
         {/* show Projects provider component */}
-        <div className="grid grid-cols-1 items-center my-8">
+        <div className="grid grid-cols-1 items-center my-8  gap-10">
           {services.map(({ title, imge, description }, index: number) => (
             <ServiceContainer
               key={title}
@@ -68,9 +68,9 @@ export const ServiceProviderSection = () => {
         </div>
     </motion.div>
 
-      <div className="flex w-full bg-blue-wave h-20 bg-cover bg-white">
+    <div className="flex w-full bg-blue-wave h-20 bg-cover bg-white">
         {/* <Image src={WaveImage} alt="wave" /> */}
       </div>
-    </motion.div>
+    </div>
   );
 };
