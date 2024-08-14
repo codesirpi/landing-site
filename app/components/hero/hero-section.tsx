@@ -6,6 +6,8 @@ import startIcon from "../../assets/hero/get-started-button-star.png";
 import { motion } from "framer-motion";
 import AnimatedSparkleSvg from "./animated-sparkle";
 import AnimatedGetStartedButton from "./animated-button";
+import AnimatedRedo from "./animated-text";
+import CursorBlinker from "./cursor-blinker";
 const HeroSection = () => {
   return (
     <div className="w-full h-[1191px] relative  bg-custom-gradient flex flex-col items-center   ">
@@ -33,10 +35,11 @@ const HeroSection = () => {
           We scultpure ideas to code for digital platform & experience
         </h1>
         <div className=" h-[50px]">
-          <p className="text-grey-400 text-center flex px-8">
-            Your partner for website development, MVP builder and data
-            visualizations
-          </p>
+          <motion.span className="text-grey-400 text-center flex px-8">
+            <span>Your partner for&nbsp;</span>
+            <AnimatedRedo />
+            <CursorBlinker />
+          </motion.span>
         </div>
         <div className="relative flex items-center justify-center w-[120px] h-[24px]   md:w-[182px] md:h-[46px] rounded-full drop-shadow-md border-violet-400 text-white  bg-cover bg-center bg-no-repeat  border-4">
           <AnimatedGetStartedButton />
