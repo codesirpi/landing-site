@@ -8,6 +8,9 @@ const config: Config = {
   ],
   theme: {
     extend: {
+      screens: {
+        xs: "450px",
+      },
       colors: {
         primary: "#0081FF",
         yellow: "#FF0",
@@ -29,6 +32,7 @@ const config: Config = {
         },
         "background-black": "#101010",
         "input-box": "#303030",
+        "submit-background": "#291A4B",
       },
       boxShadow: {
         xl: "-2px -4px 10px 0 #FFFFFF",
@@ -42,7 +46,8 @@ const config: Config = {
         "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
         "gradient-conic":
           "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
-        "gradient-primary": `linear-gradient(to right, red, green)`,
+        "custom-gradient":
+          "linear-gradient(180deg, #0F0F0F, #292929,#474747,#858585)",
         "hero-vector": "url('assets/hero/left-side-wave.svg')",
         "white-wave": "url(assets/white-wave.svg)",
         "blue-wave": "url(assets/wave.svg)",

@@ -6,6 +6,8 @@ import startIcon from "../../assets/hero/get-started-button-star.png";
 import { motion } from "framer-motion";
 import AnimatedSparkleSvg from "./animated-sparkle";
 import AnimatedGetStartedButton from "./animated-button";
+import AnimatedRedo from "./animated-text";
+import CursorBlinker from "./cursor-blinker";
 const HeroSection = () => {
   return (
     <div className="w-full h-[1191px] relative  linear-gradient-hero-section flex flex-col items-center  -z-50 ">
@@ -29,14 +31,16 @@ const HeroSection = () => {
       </div>
 
       <div className=" mt-20 absolute h-[620px] lg:w-[1187px] z-20  flex flex-col items-center  justify-center  gap-[10px]">
-        <h1 className=" font-bold text-xl  md:text-7xl  bg-gradient-to-b  from-[#C0BFFF]  to-white bg-clip-text text-transparent text-center  text-white">
-          We scultpure ideas to code for digital platform & experience
-        </h1>
+        <span className=" font-bold text-xl md:text-7xl  text-center text-gradient  ">
+          We scultpure ideas to code for&nbsp;
+          <span className="text-white">digital platform & experience</span>
+        </span>
         <div className=" h-[50px]">
-          <p className="text-grey-400 text-center flex px-8">
-            Your partner for website development, MVP builder and data
-            visualizations
-          </p>
+          <motion.span className="text-grey-400 text-center flex px-8">
+            <span>Your partner for&nbsp;</span>
+            <AnimatedRedo />
+            <CursorBlinker />
+          </motion.span>
         </div>
         <div className="relative flex items-center justify-center  h-[24px] get-started-button-gradient    md:h-[46px] rounded-full drop-shadow-md  border-[#5E0BEF] text-white  bg-white  border-4">
           <AnimatedGetStartedButton />
