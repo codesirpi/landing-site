@@ -1,3 +1,4 @@
+"use client";
 import Image from "next/image";
 import OurTeamSection from "./components/our-team/our-team-section";
 import HeroSection from "./components/hero/hero-section";

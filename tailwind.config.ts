@@ -47,6 +47,7 @@ const config: Config = {
         "gradient-primary": `linear-gradient(to right, red, green)`,
         "hero-vector": "url('assets/hero/left-side-wave.svg')",
         "white-wave": "url(assets/white-wave.svg)",
+        "blue-wave": "url(assets/wave.svg)",
         "star-button": "url('assets/hero/button-bg.svg')",
         "hero-right-vector": "url('assets/hero/right-blue-vector.svg')",
         "hero-sparkle-star": "url('assets/hero/sparklestars.svg')",

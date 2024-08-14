@@ -1,5 +1,6 @@
 import React from "react";
 import "../../globals.css";
+import { motion } from "framer-motion";
 import Testimonal from "./testimonal";
 
 const ReviewsSection = () => {
@@ -45,10 +46,34 @@ const ReviewsSection = () => {
   return (
     <div className="linear-grey-gradient w-full h-fit text-white">
       <div className="text-center mt-14 mx-4">
-        <div className="font-light text-3xl xl:text-5xl">Our Results</div>
-        <div className="text-grey-200 font-thin pt-4 md:text-lg">
+        <motion.div
+          className="font-light text-3xl xl:text-5xl"
+          initial={{ y: 100, opacity: 0 }}
+          whileInView={{
+            y: 0,
+            opacity: 1,
+          }}
+          transition={{
+            duration: 0.7,
+          }}
+          viewport={{ once: true }}
+        >
+          Our Results
+        </motion.div>
+        <motion.div
+          className="text-grey-200 font-thin pt-4 md:text-lg"
+          initial={{ y: 100, opacity: 0 }}
+          whileInView={{
+            y: 0,
+            opacity: 1,
+          }}
+          transition={{
+            duration: 0.7,
+          }}
+          viewport={{ once: true }}
+        >
           Hear what our cilents have to say about our team and services.
-        </div>
+        </motion.div>
       </div>
       <Testimonal mockData={mockData} />
     </div>
