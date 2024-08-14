@@ -9,7 +9,7 @@ const AnimatedGetStartedButton = () => {
       fill="#5E0BEF"
       xmlns="http://www.w3.org/2000/svg"
       initial={{ opacity: 0 }}
-      animate={{ opacity: [0, 5, 0] }}
+      animate={{ opacity: [0, 8, 0] }}
       transition={{
         duration: 1,
         ease: "easeInOut",

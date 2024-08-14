@@ -8,8 +8,8 @@ import AnimatedSparkleSvg from "./animated-sparkle";
 import AnimatedGetStartedButton from "./animated-button";
 const HeroSection = () => {
   return (
-    <div className="w-full h-[1191px] relative  bg-custom-gradient flex flex-col items-center   ">
-      <div className="w-full  absolute bg-transparent top-0 z-20  h-[100px] flex items-center gap-2 ">
+    <div className="w-full h-[1191px] relative  linear-gradient-hero-section flex flex-col items-center  -z-50 ">
+      <div className="w-full  absolute bg-transparent top-0 z-20  h-[100px] flex items-center gap-2 pl-12 ">
         <div className="flex items-center">
           <Image
             src={logoImg}
@@ -19,17 +19,17 @@ const HeroSection = () => {
           ></Image>
         </div>
 
-        <span className="text-white  text-[32px] font-semibold">
-          Code Sirpi
+        <span className="text-white  text-[32px] font-semibold linear-gradient-company">
+          CodeSirpi
         </span>
       </div>
 
-      <div className="absolute w-full z-20 h-full bg-cover bg-center bg-no-repeat">
+      <div className="absolute w-full top-4 left-4 z-20 h-full bg-cover bg-center bg-no-repeat">
         <AnimatedSparkleSvg />
       </div>
 
-      <div className=" absolute h-[600px]  z-20  flex flex-col items-center  justify-center px-8 gap-[10px]">
-        <h1 className=" font-bold text-xl  md:text-7xl  bg-gradient-to-b from-[#C0BFFF]  to-white bg-clip-text text-transparent text-center mt-20 text-white">
+      <div className=" mt-20 absolute h-[620px] lg:w-[1187px] z-20  flex flex-col items-center  justify-center  gap-[10px]">
+        <h1 className=" font-bold text-xl  md:text-7xl  bg-gradient-to-b  from-[#C0BFFF]  to-white bg-clip-text text-transparent text-center  text-white">
           We scultpure ideas to code for digital platform & experience
         </h1>
         <div className=" h-[50px]">
@@ -38,14 +38,14 @@ const HeroSection = () => {
             visualizations
           </p>
         </div>
-        <div className="relative flex items-center justify-center w-[120px] h-[24px]   md:w-[182px] md:h-[46px] rounded-full drop-shadow-md border-violet-400 text-white  bg-cover bg-center bg-no-repeat  border-4">
+        <div className="relative flex items-center justify-center  h-[24px] get-started-button-gradient    md:h-[46px] rounded-full drop-shadow-md  border-[#5E0BEF] text-white  bg-white  border-4">
           <AnimatedGetStartedButton />
-          <button className="absolute">
-            <div className="flex gap-2 ">
+          <button className="absolute w-full h-full">
+            <div className="flex gap-2  items-center justify-center">
               <Image
                 src={startIcon}
-                width={16}
-                height={16}
+                width={18}
+                height={18}
                 alt={"star image"}
               ></Image>
               <span>Get Started</span>
@@ -56,15 +56,15 @@ const HeroSection = () => {
       <motion.div
         className="absolute top-24 z-30  -left-4 bg-hero-vector h-full w-full bg-cover bg-center bg-no-repeat "
         initial={{ rotate: 0 }}
-        animate={{ rotate: 360 }}
+        animate={{ rotate: 90 }}
         transition={{
           duration: 30,
           repeat: Infinity,
           ease: "linear",
         }}
       ></motion.div>
-      <div className="absolute z-20 left-0 top-0 w-full h-full bg-hero-right-vector bg-cover bg-center bg-no-repeat"></div>
-      <div className="absolute z-10 left-0  -top-[40rem] w-full h-full  bg-hero-top-vector bg-cover bg-center bg-no-repeat"></div>
+      <div className="absolute z-20 left-0 opacity-60   top-0 w-full h-full bg-hero-right-vector bg-cover bg-center bg-no-repeat"></div>
+      <div className="absolute z-10 left-0 opacity-80  -top-[23rem] w-full h-full  bg-hero-top-vector bg-cover bg-center bg-no-repeat"></div>
     </div>
   );
 };
