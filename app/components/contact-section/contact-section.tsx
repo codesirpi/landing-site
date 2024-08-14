@@ -1,6 +1,7 @@
 "use client";
 import React from "react";
 import logo from "../../assets/contact-section/logo.png";
+import star from "../../assets/contact-section/star.svg";
 import Image from "next/image";
 import "../../globals.css";
 
@@ -8,6 +9,7 @@ import { useForm, ValidationError } from "@formspree/react";
 import { environment } from "@/app/environments/environment";
 import { Icon } from "@iconify/react/dist/iconify.js";
 import { motion } from "framer-motion";
+import AnimatedSubmitButton from "./animated-submit-button";
 
 const ContactSection = () => {
   const [state, handleSubmit] = useForm(environment.FORMSPREE_PROJECT_ID);
@@ -153,7 +155,7 @@ const ContactSection = () => {
         </motion.div>
 
         <motion.button
-          className="bg-[#222222] py-2 px-3.5 mt-8 mb-5 hover:cursor-pointer"
+          className="py-2 px-9 rounded-full border-4 border-submit-button bg-submit-background mt-8 mb-5 hover:cursor-pointer flex items-center relative"
           disabled={state.submitting}
           onClick={() =>
             handleSubmit({
@@ -182,6 +184,16 @@ const ContactSection = () => {
           }}
           viewport={{ once: true }}
         >
+          <div className="absolute w-10 left-0">
+            <AnimatedSubmitButton />
+          </div>
+          <Image
+            src={star}
+            width={16}
+            height={16}
+            alt="star"
+            className="inline-bock align-midle mr-1"
+          />
           Submit
         </motion.button>
         {state.succeeded && (
