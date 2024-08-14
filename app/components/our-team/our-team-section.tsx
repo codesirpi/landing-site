@@ -4,23 +4,43 @@ import TeamMemberDetailsCard from "./team-member-details-card";
 const teamMemberDetails = [
   {
     name: "Ajith",
-    role: "SOFTWARE ENGINEER",
+    role: "Frontend Engineer",
+  },
+  {
+    name: "Navani",
+    role: "Fullstack Developer",
+  },
+  {
+    name: "Arunesh",
+    role: "Frontend Engineer",
   },
   {
     name: "Ebalin",
-    role: "FRONTEND DEVELOPER",
+    role: "Frontend Engineer",
   },
   {
-    name: "Arun",
-    role: "FRONTEND DEVELOPER",
+    name: "Saran",
+    role: "Fullstack Developer",
+  },
+  {
+    name: "Anand",
+    role: "Backend Engineer",
   },
   {
     name: "Swineetha",
-    role: "SOFTWARE ENGINEER",
+    role: "Quality Engineer",
   },
   {
-    name: "Ebalin",
-    role: "FRONTEND DEVELOPER",
+    name: "Vijay",
+    role: "Technical Architect",
+  },
+  {
+    name: "Naag",
+    role: "Solution Architect",
+  },
+  {
+    name: "Sundar",
+    role: "Technical Architect",
   },
 ];
 
