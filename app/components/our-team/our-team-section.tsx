@@ -35,7 +35,7 @@ const OurTeamSection: React.FC = () => {
             for you
           </div>
         </div>
-        <div className="lg:w-[1069px] w-screen px-10 overflow-scroll h-[483px] overflow-scroll z-10  scrollbar-hide gap-[10px] flex items-center">
+        <div className="lg:w-[1069px] w-screen px-10 overflow-scroll h-[483px] z-10  gap-[10px] flex items-center">
           {teamMemberDetails.map((data, index) => (
             <TeamMemberDetailsCard
               key={index}
