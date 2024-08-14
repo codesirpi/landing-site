@@ -8,6 +8,9 @@ const config: Config = {
   ],
   theme: {
     extend: {
+      screens: {
+        xs: "450px",
+      },
       colors: {
         primary: "#0081FF",
         yellow: "#FF0",
@@ -42,7 +45,6 @@ const config: Config = {
         "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
         "gradient-conic":
           "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
-        "gradient-primary": `linear-gradient(to right, red, green)`,
         "hero-vector": "url('assets/hero/left-side-wave.svg')",
         "white-wave": "url(assets/white-wave.svg)",
         "blue-wave": "url(assets/wave.svg)",

@@ -4,6 +4,10 @@ import { motion } from "framer-motion";
 import Testimonal from "./testimonal";
 
 const ReviewsSection = () => {
+  const resultHeader = "Our Results".split(" ");
+  const resultContent =
+    "Hear what our cilents have to say about our team and services.".split(" ");
+
   const mockData = [
     {
       rating: 5,
@@ -32,15 +36,15 @@ const ReviewsSection = () => {
       designation: "Head of Design",
       Company: "Fabrics",
     },
-    // {
-    //   rating: 2,
-    //   comment: "Need to be Better",
-    //   profilePicture:
-    //     "https://st.depositphotos.com/2218212/2938/i/950/depositphotos_29387653-stock-photo-facebook-profile.jpg",
-    //   profileName: "Peter",
-    //   designation: "Founder",
-    //   Company: "Uber",
-    // },
+    {
+      rating: 2,
+      comment: "Need to be Better",
+      profilePicture:
+        "https://st.depositphotos.com/2218212/2938/i/950/depositphotos_29387653-stock-photo-facebook-profile.jpg",
+      profileName: "Peter",
+      designation: "Founder",
+      Company: "Uber",
+    },
   ];
 
   return (
@@ -58,7 +62,21 @@ const ReviewsSection = () => {
           }}
           viewport={{ once: true }}
         >
-          Our Results
+          {resultHeader.map((word, i) => (
+            <motion.span
+              key={i}
+              className="inline-block break-words"
+              initial={{ opacity: 0 }}
+              whileInView={{ opacity: 1 }}
+              transition={{
+                duration: 0.5,
+                delay: i / 10,
+              }}
+              viewport={{ once: true }}
+            >
+              {word}&nbsp;
+            </motion.span>
+          ))}
         </motion.div>
         <motion.div
           className="text-grey-200 font-thin pt-4 md:text-lg"
@@ -72,7 +90,21 @@ const ReviewsSection = () => {
           }}
           viewport={{ once: true }}
         >
-          Hear what our cilents have to say about our team and services.
+          {resultContent.map((word, i) => (
+            <motion.span
+              key={i}
+              className="inline-block break-words"
+              initial={{ opacity: 0 }}
+              whileInView={{ opacity: 1 }}
+              transition={{
+                duration: 0.25,
+                delay: i / 10,
+              }}
+              viewport={{ once: true }}
+            >
+              {word}&nbsp;
+            </motion.span>
+          ))}
         </motion.div>
       </div>
       <Testimonal mockData={mockData} />
