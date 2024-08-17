@@ -42,3 +42,50 @@ body {
   background-clip: text;
   color: transparent;
 }
+.carousel-wrapper {
+  display: grid;
+  place-content: center;
+  border-radius: 2rem;
+
+}
+.carousel-content {
+  position: relative;
+  width: 20rem;
+  height: 20rem;
+
+}
+
+.carousel-item {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  border: 1px solid red;
+  background: black;
+  border-radius: 5px;
+  padding: 20px;
+
+}
+
+.carousel-btns {
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  z-index: 6;
+}
+button {
+    padding: 8px 15px;
+    width: 5rem;
+    background-color: rgb(62, 62, 62);
+    border-radius: 1rem;
+    color: #fff;
+    font-weight: 700;
+    letter-spacing: 0.15rem;
+    text-transform: uppercase;
+    cursor: pointer;
+    border: none;
+  }

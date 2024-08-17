@@ -51,9 +51,8 @@ export const ServiceProviderSection = () => {
         <div className="my-6 text-violet-700 font-medium text-xl ">
           What we do?
         </div>
-        <div className="flex justify-center items-center flex-col lg:font-extrabold text-center font-bold lg:text-3xl text-wrap sm:text-xl text-grey-700 ">
-          Expertly crafting and designing solutions that <br />
-          meet your needs
+        <div className="md:w-[60%] flex justify-center items-center flex-col lg:font-extrabold text-center font-bold lg:text-3xl text-wrap sm:text-xl text-grey-700 ">
+          Expertly crafting and designing solutions that meet your needs
         </div>
 
         {/* show Projects provider component */}
