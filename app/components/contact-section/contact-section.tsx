@@ -1,6 +1,7 @@
 "use client";
 import React from "react";
 import logo from "../../assets/contact-section/logo.png";
+import star from "../../assets/contact-section/star.svg";
 import Image from "next/image";
 import "../../globals.css";
 
@@ -8,6 +9,7 @@ import { useForm, ValidationError } from "@formspree/react";
 import { environment } from "@/app/environments/environment";
 import { Icon } from "@iconify/react/dist/iconify.js";
 import { motion } from "framer-motion";
+import AnimatedSubmitButton from "./animated-submit-button";
 
 const ContactSection = () => {
   const [state, handleSubmit] = useForm(environment.FORMSPREE_PROJECT_ID);
@@ -16,6 +18,8 @@ const ContactSection = () => {
     email: "",
     message: "",
   });
+
+  const contactText = "Let's talk about your project".split(" ");
 
   return (
     <div className="bg-background-black w-full h-fit text-white">
@@ -34,16 +38,16 @@ const ContactSection = () => {
         <Image
           src={logo}
           alt="logo"
-          width={44}
-          height={29}
-          className="inline-block align-middle mr-3"
+          width={34}
+          height={22}
+          className="inline-block align-middle mr-2.5 w-[34px] h-[22px] xs:w-11 xs:h-[29px] xs:mr-3"
         />
-        <div className="linear-gradient-company inline-block align-middle text-2xl font-semibold">
+        <div className="linear-gradient-company inline-block align-middle text-xl font-semibold xs:text-2xl">
           CodeSirpi
         </div>
       </motion.div>
       <motion.div
-        className="my-8 text-center text-2xl  text-grey-800 sm:text-3xl lg:text-5xl"
+        className="my-8 text-center text-xl text-grey-800 xs:text-2xl sm:text-3xl lg:text-5xl"
         initial={{ y: 100, opacity: 0 }}
         whileInView={{
           y: 0,
@@ -54,10 +58,25 @@ const ContactSection = () => {
         }}
         viewport={{ once: true }}
       >
-        Let&#39;s talk about your project
+        {contactText.map((letter, i) => (
+          <motion.span
+            key={i}
+            className="inline-block break-words"
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
+            transition={{
+              duration: 0.25,
+              delay: i / 10,
+            }}
+            viewport={{ once: true }}
+          >
+            {letter}&nbsp;
+          </motion.span>
+        ))}
       </motion.div>
+
       <div className="w-full flex flex-col items-center justify-center">
-        <div className="w-full max-w-[670px] flex gap-x-5 px-4">
+        <div className="w-full max-w-[670px] flex flex-col gap-5 px-4 xs:flex-row">
           <motion.div
             className="w-[100%]"
             initial={{ y: 70, opacity: 0 }}
@@ -70,13 +89,14 @@ const ContactSection = () => {
             }}
             viewport={{ once: true }}
           >
-            <input
+            <motion.input
               className=" placeholder:text-grey-600 bg-input-box rounded-[28px] h-14 w-full px-5"
               placeholder="Your Name"
               value={input.name}
               onChange={(e) => {
                 setInput({ ...input, name: e.target.value });
               }}
+              whileTap={{ scale: 1.1 }}
             />
           </motion.div>
 
@@ -92,7 +112,7 @@ const ContactSection = () => {
             }}
             viewport={{ once: true }}
           >
-            <input
+            <motion.input
               id="email"
               className="placeholder:text-grey-600 bg-input-box rounded-[28px] h-14 w-full px-5"
               placeholder="Your Email Address"
@@ -100,6 +120,7 @@ const ContactSection = () => {
               onChange={(e) => {
                 setInput({ ...input, email: e.target.value });
               }}
+              whileTap={{ scale: 1.1 }}
             />
             {state.errors && (
               <div className="flex items-center">
@@ -122,24 +143,25 @@ const ContactSection = () => {
           }}
           viewport={{ once: true }}
         >
-          <textarea
+          <motion.textarea
             id="message"
-            className="placeholder:text-grey-600 bg-input-box border-0 rounded-[28px]  h-32 w-[100%] px-5 py-2 mt-16"
+            className="placeholder:text-grey-600 bg-input-box border-0 rounded-[28px]  h-32 w-[100%] px-5 py-2 mt-8"
             placeholder="Please tell us a brief about your project"
             onChange={(e) => {
               setInput({ ...input, message: e.target.value });
             }}
+            whileTap={{ scale: 1.1 }}
           />
         </motion.div>
 
         <motion.button
+          className="py-2 px-9 rounded-full border-4 border-violet-700 bg-submit-background mt-8 mb-5 hover:cursor-pointer flex items-center relative"
           disabled={state.submitting}
           onClick={() =>
             handleSubmit({
               ...input,
             })
           }
-          className="bg-[#222222] py-2 px-3.5 mt-10 mb-5 hover:cursor-pointer"
           whileTap={{
             scale: 0.9,
             transition: {
@@ -162,6 +184,16 @@ const ContactSection = () => {
           }}
           viewport={{ once: true }}
         >
+          <div className="absolute w-10 left-0">
+            <AnimatedSubmitButton />
+          </div>
+          <Image
+            src={star}
+            width={16}
+            height={16}
+            alt="star"
+            className="inline-bock align-midle mr-1"
+          />
           Submit
         </motion.button>
         {state.succeeded && (

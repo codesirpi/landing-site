@@ -4,23 +4,43 @@ import TeamMemberDetailsCard from "./team-member-details-card";
 const teamMemberDetails = [
   {
     name: "Ajith",
-    role: "SOFTWARE ENGINEER",
+    role: "Frontend Engineer",
+  },
+  {
+    name: "Navani",
+    role: "Fullstack Developer",
+  },
+  {
+    name: "Arunesh",
+    role: "Frontend Engineer",
   },
   {
     name: "Ebalin",
-    role: "FRONTEND DEVELOPER",
+    role: "Frontend Engineer",
   },
   {
-    name: "Arun",
-    role: "FRONTEND DEVELOPER",
+    name: "Saran",
+    role: "Fullstack Developer",
+  },
+  {
+    name: "Anand",
+    role: "Backend Engineer",
   },
   {
     name: "Swineetha",
-    role: "SOFTWARE ENGINEER",
+    role: "Quality Engineer",
   },
   {
-    name: "Ebalin",
-    role: "FRONTEND DEVELOPER",
+    name: "Vijay",
+    role: "Technical Architect",
+  },
+  {
+    name: "Naag",
+    role: "Solution Architect",
+  },
+  {
+    name: "Sundar",
+    role: "Technical Architect",
   },
 ];
 
@@ -29,8 +49,10 @@ const OurTeamSection: React.FC = () => {
     <section className="bg-white w-full flex justify-center">
       <div className="pb-20">
         <div className="flex flex-col items-center gap-3">
-          <div className="text-lg md:text-3xl font-bold">Our Team</div>
-          <div className="md:w-[40%] text-center  flex flex-wrap text-sm  text-gray-500">
+          <div className="text-lg md:text-3xl font-bold text-black">
+            Our Team
+          </div>
+          <div className="px-4 md:w-[40%] text-center  flex flex-wrap text-sm  text-gray-500">
             Just sit back and relax while we take care of your business needs
             for you
           </div>
