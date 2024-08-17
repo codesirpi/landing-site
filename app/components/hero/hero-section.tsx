@@ -9,6 +9,15 @@ import AnimatedGetStartedButton from "./animated-button";
 import AnimatedRedo from "./animated-text";
 import CursorBlinker from "./cursor-blinker";
 const HeroSection = () => {
+  const containerVariants = {
+    initial: {
+      backgroundPosition: "0% 50%",
+    },
+    animate: {
+      backgroundPosition: ["0% 50%", "100% 50%"],
+    },
+  };
+
   return (
     <div className="w-full h-[1191px] relative  linear-gradient-hero-section flex flex-col items-center  -z-50 ">
       <div className="w-full  absolute bg-transparent top-0 z-20  h-[100px] flex items-center gap-2 pl-12 ">
@@ -59,12 +68,13 @@ const HeroSection = () => {
       </div>
       <motion.div
         className="absolute top-24 z-30  -left-4 bg-hero-vector h-full w-full bg-cover bg-center bg-no-repeat "
-        initial={{ rotate: 0 }}
-        animate={{ rotate: 90 }}
+        variants={containerVariants}
+        initial="initial"
+        animate="animate"
         transition={{
-          duration: 30,
-          repeat: Infinity,
+          duration: 10,
           ease: "linear",
+          repeat: Infinity,
         }}
       ></motion.div>
       <div className="absolute z-20 left-0 opacity-60   top-0 w-full h-full bg-hero-right-vector bg-cover bg-center bg-no-repeat"></div>
