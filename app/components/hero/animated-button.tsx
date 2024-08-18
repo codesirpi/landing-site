@@ -3,7 +3,7 @@ import { motion } from "framer-motion";
 const AnimatedGetStartedButton = () => {
   return (
     <motion.svg
-      width="181"
+      width="175"
       height="40"
       viewBox="0 0 181 40"
       fill="#5E0BEF"

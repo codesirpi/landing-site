@@ -1,8 +1,8 @@
 "use client";
 import React from "react";
 import Image from "next/image";
-import logoImg from "../../assets/hero/logo.png";
-import startIcon from "../../assets/hero/get-started-button-star.png";
+import logo from "../../assets/logo.svg";
+import star from "../../assets/star.svg";
 import { motion } from "framer-motion";
 import AnimatedSparkleSvg from "./animated-sparkle";
 import AnimatedGetStartedButton from "./animated-button";
@@ -13,12 +13,7 @@ const HeroSection = () => {
     <div className="w-full h-[1191px] relative  linear-gradient-hero-section flex flex-col items-center  -z-50 ">
       <div className="w-full  absolute bg-transparent top-0 z-20  h-[100px] flex items-center gap-2 pl-12 ">
         <div className="flex items-center">
-          <Image
-            src={logoImg}
-            alt={"Company Logo"}
-            width={44}
-            height={30}
-          ></Image>
+          <Image src={logo} alt={"Company Logo"} width={44} height={30}></Image>
         </div>
 
         <span className="text-white  text-[32px] font-semibold linear-gradient-company">
@@ -36,13 +31,13 @@ const HeroSection = () => {
           <span className="text-white">digital platform & experience</span>
         </span>
         <div className=" h-[50px]">
-          <motion.span className="text-grey-400 text-center flex px-8">
+          <motion.span className="text-violet-700 text-center text-lg xs:text-xl sm:text-2xl px-8">
             <span>Your partner for&nbsp;</span>
             <AnimatedRedo />
             <CursorBlinker />
           </motion.span>
         </div>
-        <div className="relative flex items-center justify-center  h-[24px] get-started-button-gradient    md:h-[46px] rounded-full drop-shadow-md  border-[#5E0BEF] text-white  bg-white  border-4">
+        {/* <div className="relative flex items-center justify-center  h-[24px] get-started-button-gradient    md:h-[46px] rounded-full drop-shadow-md  border-[#5E0BEF] text-white  bg-white  border-4">
           <AnimatedGetStartedButton />
           <button className="absolute w-full h-full">
             <div className="flex gap-2  items-center justify-center">
@@ -55,7 +50,20 @@ const HeroSection = () => {
               <span>Get Started</span>
             </div>{" "}
           </button>
-        </div>
+        </div> */}
+        <motion.button className="py-2 px-9 rounded-full border-4 border-violet-700 bg-button-background mt-8 mb-5 hover:cursor-pointer flex items-center relative">
+          <div className="absolute w-10 left-0">
+            <AnimatedGetStartedButton />
+          </div>
+          <Image
+            src={star}
+            width={16}
+            height={16}
+            alt="star"
+            className="inline-bock align-midle mr-1"
+          />
+          Get Started
+        </motion.button>
       </div>
       <motion.div
         className="absolute top-24 z-30  -left-4 bg-hero-vector h-full w-full bg-cover bg-center bg-no-repeat "

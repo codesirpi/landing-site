@@ -1,7 +1,7 @@
 "use client";
 import React from "react";
-import logo from "../../assets/contact-section/logo.png";
-import star from "../../assets/contact-section/star.svg";
+import logo from "../../assets/logo.svg";
+import star from "../../assets/star.svg";
 import Image from "next/image";
 import "../../globals.css";
 
@@ -155,7 +155,7 @@ const ContactSection = () => {
         </motion.div>
 
         <motion.button
-          className="py-2 px-9 rounded-full border-4 border-violet-700 bg-submit-background mt-8 mb-5 hover:cursor-pointer flex items-center relative"
+          className="py-2 px-9 rounded-full border-4 border-violet-700 bg-button-background mt-8 mb-5 hover:cursor-pointer flex items-center relative"
           disabled={state.submitting}
           onClick={() =>
             handleSubmit({
