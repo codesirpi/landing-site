@@ -2,7 +2,6 @@ import React, { useState } from "react";
 import { AnimatePresence, motion } from "framer-motion";
 import { useEffect } from "react";
 import Image from "next/image";
-import SampleImage from "../assets/bean-town.png";
 
 const Carousel = ({ Data }: { Data: string[] }) => {
   const [FlowDirection, setFlowDirection] = useState(true);
@@ -49,27 +48,25 @@ const Carousel = ({ Data }: { Data: string[] }) => {
   };
 
   // useEffect(() => {
-
-  //   const timerId = setInterval(() => nextBtn(), 2000)
-  //     return () => clearInterval(timerId)
+  //   const timerId = setInterval(() => nextBtn(), 2000);
+  //   return () => clearInterval(timerId);
   // });
   const variants = {
     center: {
       x: "0rem",
       opacity: 1,
       scale: 1,
-      y: "4rem",
       zIndex: "5",
       filter: "brightness(100%)",
       backgroundImage: Data[CenterId],
-      boxShadow: "0px 0px 30px 0px rgba(0,0,0,0.3)",
+      boxShadow: "-2px -4px 10px 0 #FFFFFF",
       transition: {
         type: "spring",
         duration: 1,
       },
     },
     left: {
-      x: "-17rem",
+      x: "-18rem",
       opacity: 1,
       filter: "brightness(40%)",
       scale: 1,
@@ -83,7 +80,7 @@ const Carousel = ({ Data }: { Data: string[] }) => {
     },
     right: {
       backgroundImage: Data[RightId],
-      x: "17rem",
+      x: "18rem",
       opacity: 1,
       filter: "brightness(40%)",
       scale: 1,
@@ -106,82 +103,64 @@ const Carousel = ({ Data }: { Data: string[] }) => {
     },
   };
   return (
-    <motion.div className="carousel-wrapper">
-      <motion.div className="carousel-content">
-        <AnimatePresence initial={false}>
-          <motion.div
-            key={LeftId}
-            variants={variants}
-            initial={FlowDirection ? "center" : "leftHidden"}
-            animate="left"
-            exit={"leftHidden"}
-            className="carousel-item"
-          >
-            <Image
-              src={variants.left.backgroundImage}
-              alt={""}
-              className="w-full h-full border border-[blue]"
-            />
+    <motion.div className="carousel-wrapper w-full justify-center px-5 md:px-10">
+      <div className="w-full">
+        <div className="lg:w-[800px] w-full flex flex-col overflow-x-clip items-center h-[360px] text-center bg-gradient-to-r from-[#E5EAFF] via-[#ebe7fd] to-[#FBD8F5] rounded-[25px]">
+          <div className="p-5">
+            <div className="font-bold md:text-3xl text-2xl">Our Work</div>
+            <div className="text-grey-500 md:text-lg ">
+              Check out some of our work
+            </div>
+          </div>
+          <motion.div className="carousel-content">
+            <AnimatePresence initial={false}>
+              <motion.div
+                key={LeftId}
+                variants={variants}
+                initial={FlowDirection ? "center" : "leftHidden"}
+                animate="left"
+                exit={"leftHidden"}
+                className="carousel-item"
+              >
+                <Image
+                  src={variants.left.backgroundImage}
+                  alt={""}
+                  className="w-full h-full"
+                />
+              </motion.div>
+              <motion.div
+                variants={variants}
+                key={CenterId}
+                initial={FlowDirection ? "right" : "left"}
+                animate="center"
+                className="carousel-item top-10 "
+              >
+                <Image
+                  src={variants.center.backgroundImage}
+                  alt={""}
+                  className="w-full h-full"
+                />
+                <div className="bg-black text-white shadow-card absolute w-full left-0 h-10 flex items-center justify-center rounded-b-[5px]">
+                  ajith
+                </div>
+              </motion.div>
+              <motion.div
+                key={RightId}
+                variants={variants}
+                initial={FlowDirection ? "rightHidden" : "center"}
+                animate="right"
+                exit={"rightHidden"}
+                className="carousel-item"
+              >
+                <Image
+                  src={variants.right.backgroundImage}
+                  alt={""}
+                  className="w-full h-full"
+                />
+              </motion.div>
+            </AnimatePresence>
           </motion.div>
-          <motion.div
-            variants={variants}
-            key={CenterId}
-            initial={FlowDirection ? "right" : "left"}
-            animate="center"
-            className="carousel-item"
-          >
-            <Image
-              src={SampleImage}
-              alt={""}
-              //   height={700}
-              className="w-full h-full border border-red-900"
-            />
-          </motion.div>
-          <motion.div
-            key={RightId}
-            variants={variants}
-            initial={FlowDirection ? "rightHidden" : "center"}
-            animate="right"
-            exit={"rightHidden"}
-            className="carousel-item"
-          >
-            <Image
-              src={variants.right.backgroundImage}
-              alt={""}
-              className="w-full h-full border border-green-900"
-            />
-          </motion.div>
-        </AnimatePresence>
-      </motion.div>
-      <div className="carousel-btns">
-        <motion.button
-          initial={{ opacity: 0, scale: 0 }}
-          animate={{ opacity: 1, scale: 1 }}
-          transition={{
-            type: "spring",
-            duration: 0.5,
-          }}
-          whileHover={{ scale: 1.1 }}
-          whileTap={{ scale: 0.8 }}
-          className="bwd-btn"
-          onClick={prevBtn}
-        >
-          Back
-        </motion.button>
-        <motion.button
-          initial={{ opacity: 0, scale: 0 }}
-          animate={{ opacity: 1, scale: 1 }}
-          transition={{
-            type: "spring",
-            duration: 0.5,
-          }}
-          whileHover={{ scale: 1.1 }}
-          whileTap={{ scale: 0.8 }}
-          className="fwd-btn"
-          onClick={nextBtn}
-        >
-          Next
-        </motion.button>
+        </div>
       </div>
     </motion.div>
   );

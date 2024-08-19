@@ -75,15 +75,14 @@ body {
 }
 .carousel-wrapper {
   display: grid;
-  place-content: center;
+  /* place-content: center; */
   border-radius: 2rem;
 
 }
 .carousel-content {
   position: relative;
-  width: 20rem;
-  height: 20rem;
-
+  width: 19rem;
+  height: 18rem;
 }
 
 .carousel-item {
@@ -93,21 +92,12 @@ body {
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
-  border: 1px solid red;
   background: black;
   border-radius: 5px;
   padding: 20px;
 
 }
 
-.carousel-btns {
-  margin-top: 2rem;
-  margin-bottom: 2rem;
-  display: flex;
-  justify-content: center;
-  gap: 1rem;
-  z-index: 6;
-}
 button {
     padding: 8px 15px;
     width: 5rem;
