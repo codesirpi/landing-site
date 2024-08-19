@@ -36,7 +36,7 @@ const AnimatedText = () => {
     });
   }, []);
 
-  return <motion.span className="inline">{displayText}</motion.span>;
+  return <motion.span className="inline font-bold">{displayText}</motion.span>;
 };
 
 export default AnimatedText;
