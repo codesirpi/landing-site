@@ -60,7 +60,7 @@ const ReviewsSection = () => {
           transition={{
             duration: 0.7,
           }}
-          viewport={{ once: true }}   
+          viewport={{ once: true }}
         >
           {resultHeader.map((word, i) => (
             <motion.span
@@ -72,7 +72,7 @@ const ReviewsSection = () => {
                 duration: 0.5,
                 delay: i / 10,
               }}
-              viewport={{ once: true }} 
+              viewport={{ once: true }}
             >
               {word}&nbsp;
             </motion.span>
@@ -88,7 +88,7 @@ const ReviewsSection = () => {
           transition={{
             duration: 0.7,
           }}
-          viewport={{ once: true }}   
+          viewport={{ once: true }}
         >
           {resultContent.map((word, i) => (
             <motion.span
@@ -100,7 +100,7 @@ const ReviewsSection = () => {
                 duration: 0.25,
                 delay: i / 10,
               }}
-              viewport={{ once: true }}   
+              viewport={{ once: true }}
             >
               {word}&nbsp;
             </motion.span>
