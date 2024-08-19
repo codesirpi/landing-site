@@ -199,7 +199,7 @@ const ContactSection = () => {
           }}
           viewport={{ once: true }}
         >
-          <div className="absolute w-10 left-0">
+          <div className="absolute w-full left-0">
             <AnimatedSubmitButton />
           </div>
           <Image
