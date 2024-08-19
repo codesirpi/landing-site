@@ -31,7 +31,7 @@ const services = [
 export const ServiceProviderSection = () => {
   return (
     <div className="flex flex-col w-full">
-      <div className="flex flex-col bg-white w-full items-center justify-center px-2">
+      <div className="flex flex-col bg-white w-full items-center justify-center px-2 z-30">
         <motion.div
           initial={{
             y: 50,
