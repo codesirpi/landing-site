@@ -15,27 +15,16 @@ type MockData = {
 
 const Testimonal = ({ mockData }: { mockData: MockData[] }) => {
   return (
-    <motion.div
-      className="flex gap-x-6 linear-gradient-fade w-full max-w-[1145px] mx-auto overflow-hidden"
-      initial={{ y: 100, opacity: 0 }}
-      whileInView={{
-        y: 0,
-        opacity: 1,
-        transition: {
-          duration: 0.6,
-        },
-      }}
-      viewport={{ once: true }}
-    >
+    <div className="flex linear-gradient-fade w-full max-w-[1145px] mx-auto overflow-hidden">
       <div>
         <motion.div
-          className="flex gap-x-6  w-full h-fit my-20  overflow-x-hidden"
+          className="flex w-full h-fit my-20  overflow-x-hidden"
           initial={{ x: 0 }}
           animate={{
             x: "-100%",
           }}
           transition={{
-            duration: 8,
+            duration: 12,
             repeat: Infinity,
             repeatType: "loop",
             ease: "linear",
@@ -43,7 +32,7 @@ const Testimonal = ({ mockData }: { mockData: MockData[] }) => {
         >
           {mockData.map((data: MockData, index: number) => (
             <div
-              className="flex flex-col gap-y-10 w-full min-w-[290px]  max-w-[361px]  bg-background-black px-7 py-10 xs:min-w-[361px]"
+              className="flex ml-6 flex-col gap-y-10 w-full min-w-[290px]  max-w-[361px]  bg-background-black px-7 py-10 xs:min-w-[361px]"
               key={index}
             >
               <div className="flex">
@@ -88,15 +77,15 @@ const Testimonal = ({ mockData }: { mockData: MockData[] }) => {
         </motion.div>
       </div>
       {/* For now,data is repeated to create a infinity loop effect */}
-      <div>
+      <div className="">
         <motion.div
-          className="flex gap-x-6 w-full h-fit my-20  overflow-x-hidden  ml-4"
+          className="flex w-full h-fit my-20 overflow-x-hidden"
           initial={{ x: 0 }}
           animate={{
             x: "-100%",
           }}
           transition={{
-            duration: 8,
+            duration: 12,
             repeat: Infinity,
             repeatType: "loop",
             ease: "linear",
@@ -104,7 +93,7 @@ const Testimonal = ({ mockData }: { mockData: MockData[] }) => {
         >
           {mockData.map((data: MockData, index: number) => (
             <div
-              className="flex flex-col gap-y-10 w-full min-w-[290px]  max-w-[361px]  bg-background-black px-7 py-10 xs:min-w-[361px]"
+              className="flex ml-6 flex-col gap-y-10 w-full min-w-[290px]  max-w-[361px]  bg-background-black px-7 py-10 xs:min-w-[361px]"
               key={index}
             >
               <div className="flex">
@@ -148,7 +137,7 @@ const Testimonal = ({ mockData }: { mockData: MockData[] }) => {
           ))}
         </motion.div>
       </div>
-    </motion.div>
+    </div>
   );
 };
 

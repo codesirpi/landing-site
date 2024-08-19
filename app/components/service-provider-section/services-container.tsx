@@ -29,7 +29,7 @@ export const ServiceContainer = ({
         x: 0,
         y: 0,
         transition: {
-          duration: 2,
+          duration: 1,
         },
       }}
       viewport={{ once: true }}

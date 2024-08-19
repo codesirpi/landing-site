@@ -26,12 +26,12 @@ const HeroSection = () => {
         </div>
       </div>
 
-      <div className="absolute w-full top-4 left-4 z-20 h-full bg-cover bg-center bg-no-repeat">
+      <div className="absolute top-4 left-4 z-20 h-full bg-cover bg-center bg-no-repeat">
         <AnimatedSparkleSvg />
       </div>
 
       <div className="absolute h-screen lg:w-[1187px] z-40  flex flex-col items-center  justify-center gap-2 xs:gap-7">
-        <span className=" font-bold text-[22px] xs:text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl  text-center text-gradient  ">
+        <span className=" font-bold text-[22px] xs:text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl  text-center text-gradient">
           We scultpure ideas to code for&nbsp;
           <span className="text-white block">
             digital platform & experience
@@ -44,8 +44,19 @@ const HeroSection = () => {
             <CursorBlinker />
           </motion.span>
         </div>
-        <motion.button className=" mt-2 py-2 px-5 rounded-full border-4 border-violet-700 bg-button-background hover:cursor-pointer flex items-center relative xs:mt-0 xs:px-9">
-          <div className="absolute w-10 left-0">
+        <motion.button
+          className=" mt-2 py-2 px-5 rounded-full border-4 border-violet-700 bg-button-background hover:cursor-pointer flex items-center relative xs:mt-0 xs:px-9"
+          initial={{ y: 30, opacity: 0 }}
+          whileInView={{
+            y: 0,
+            opacity: 1,
+          }}
+          transition={{
+            duration: 0.3,
+          }}
+          viewport={{ once: true }}
+        >
+          <div className="absolute w-full left-0">
             <AnimatedGetStartedButton />
           </div>
           <Image
