@@ -10,7 +10,7 @@ import AnimatedRedo from "./animated-text";
 import CursorBlinker from "./cursor-blinker";
 const HeroSection = () => {
   return (
-    <div className="w-full h-screen relative linear-gradient-hero-section flex flex-col items-center  -z-50 ">
+    <div className="w-full h-screen relative linear-gradient-hero-section flex flex-col items-center">
       <div className="z-20 w-full ml-11 my-7 md:ml-[5%] md:my-[2.5%] ">
         <div>
           <Image
@@ -47,6 +47,18 @@ const HeroSection = () => {
         <motion.button
           className=" mt-2 py-2 px-5 rounded-full border-4 border-violet-700 bg-button-background hover:cursor-pointer flex items-center relative xs:mt-0 xs:px-9"
           initial={{ y: 30, opacity: 0 }}
+          whileTap={{
+            scale: 0.9,
+            transition: {
+              duration: 0.1,
+            },
+          }}
+          whileHover={{
+            scale: 1.1,
+            transition: {
+              duration: 0.1,
+            },
+          }}
           whileInView={{
             y: 0,
             opacity: 1,
