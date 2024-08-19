@@ -40,9 +40,9 @@ const ContactSection = () => {
           alt="logo"
           width={34}
           height={22}
-          className="inline-block align-middle mr-2.5 w-[34px] h-[22px] xs:w-11 xs:h-[29px] xs:mr-3"
+          className="inline-block align-middle mr-2.5 w-[34px] h-[22px] md:w-11 md:h-[29px] md:mr-3"
         />
-        <div className="linear-gradient-company inline-block align-middle text-xl font-semibold xs:text-2xl">
+        <div className="linear-gradient-company inline-block align-middle font-semibold text-2xl md:text-[32px]">
           CodeSirpi
         </div>
       </motion.div>

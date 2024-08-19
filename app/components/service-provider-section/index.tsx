@@ -6,14 +6,14 @@ import WebDesignSVG from "../../assets/service-provider-sections/web-design.svg"
 import MVPBuilderSVG from "../../assets/service-provider-sections/mvp-builder.svg";
 import DataVisualizationSVG from "../../assets/service-provider-sections/data-visualization.svg";
 import WaveImage from "../../assets/wave.svg";
-import { motion, useInView } from 'framer-motion';
-
+import { motion, useInView } from "framer-motion";
 
 const services = [
   {
     title: "Web Design",
     imge: WebDesignSVG,
-    description: "Enhance your digital presence quickly with high quality website",
+    description:
+      "Enhance your digital presence quickly with high quality website",
   },
   {
     title: "MVP Builder",
@@ -23,29 +23,31 @@ const services = [
   {
     title: "Data Visualization",
     imge: DataVisualizationSVG,
-    description: "Turn data into engaging visuals to track trends & gain insights",
+    description:
+      "Turn data into engaging visuals to track trends & gain insights",
   },
 ];
 
 export const ServiceProviderSection = () => {
   return (
     <motion.div className="flex flex-col w-full">
-      <motion.div 
-      initial={{
-        y: 5,
-        opacity: 0,
-    }}
-    whileInView={{
-        y:0,
-        opacity: 1,
-    }}
-    transition={{
-        duration: 0.7,
-    }}
-    viewport={{
-        once: true
-    }}
-      className="flex flex-col bg-white w-full items-center justify-center px-2">
+      <motion.div
+        initial={{
+          y: 5,
+          opacity: 0,
+        }}
+        whileInView={{
+          y: 0,
+          opacity: 1,
+        }}
+        transition={{
+          duration: 0.7,
+        }}
+        viewport={{
+          once: true,
+        }}
+        className="flex flex-col bg-white w-full items-center justify-center px-2"
+      >
         <div className="my-6 text-violet-700 font-medium text-xl ">
           What we do?
         </div>
@@ -66,7 +68,7 @@ export const ServiceProviderSection = () => {
             />
           ))}
         </div>
-    </motion.div>
+      </motion.div>
 
       <div className="flex w-full bg-blue-wave h-20 bg-cover bg-white">
         {/* <Image src={WaveImage} alt="wave" /> */}
