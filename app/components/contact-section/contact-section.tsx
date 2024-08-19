@@ -1,7 +1,7 @@
 "use client";
 import React from "react";
-import logo from "../../assets/contact-section/logo.png";
-import star from "../../assets/contact-section/star.svg";
+import logo from "../../assets/logo.svg";
+import star from "../../assets/star.svg";
 import Image from "next/image";
 import "../../globals.css";
 
@@ -40,9 +40,9 @@ const ContactSection = () => {
           alt="logo"
           width={34}
           height={22}
-          className="inline-block align-middle mr-2.5 w-[34px] h-[22px] xs:w-11 xs:h-[29px] xs:mr-3"
+          className="inline-block align-middle mr-2.5 w-[34px] h-[22px] md:w-11 md:h-[29px] md:mr-3"
         />
-        <div className="linear-gradient-company inline-block align-middle text-xl font-semibold xs:text-2xl">
+        <div className="linear-gradient-company inline-block align-middle font-semibold text-2xl md:text-[32px]">
           CodeSirpi
         </div>
       </motion.div>
@@ -155,7 +155,7 @@ const ContactSection = () => {
         </motion.div>
 
         <motion.button
-          className="py-2 px-9 rounded-full border-4 border-violet-700 bg-submit-background mt-8 mb-5 hover:cursor-pointer flex items-center relative"
+          className="py-2 px-9 rounded-full border-4 border-violet-700 bg-button-background mt-8 mb-5 hover:cursor-pointer flex items-center relative"
           disabled={state.submitting}
           onClick={() =>
             handleSubmit({
