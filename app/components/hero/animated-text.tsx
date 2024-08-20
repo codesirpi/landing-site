@@ -3,7 +3,7 @@ import React, { useEffect } from "react";
 
 const AnimatedText = () => {
   const textIndex = useMotionValue(0);
-  const texts = ["website development", "MVP builder", "data visualization"];
+  const texts = ["Website Development", "MVP Builder", "Data Visualization"];
 
   const baseText = useTransform(textIndex, (latest) => texts[latest] || "");
   const count = useMotionValue(0);

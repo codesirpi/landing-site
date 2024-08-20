@@ -4,7 +4,6 @@ import { motion } from "framer-motion";
 import Testimonal from "./testimonal";
 
 const ReviewsSection = () => {
-  const resultHeader = "Our Results".split(" ");
   const resultContent =
     "Hear what our cilents have to say about our team and services.".split(" ");
 
@@ -60,23 +59,9 @@ const ReviewsSection = () => {
           transition={{
             duration: 0.7,
           }}
-          viewport={{ once: true }}   
+          viewport={{ once: true }}
         >
-          {resultHeader.map((word, i) => (
-            <motion.span
-              key={i}
-              className="inline-block break-words"
-              initial={{ opacity: 0 }}
-              whileInView={{ opacity: 1 }}
-              transition={{
-                duration: 0.5,
-                delay: i / 10,
-              }}
-              viewport={{ once: true }} 
-            >
-              {word}&nbsp;
-            </motion.span>
-          ))}
+          Our Results
         </motion.div>
         <motion.div
           className="text-grey-200 font-thin pt-4 md:text-lg"
@@ -88,7 +73,7 @@ const ReviewsSection = () => {
           transition={{
             duration: 0.7,
           }}
-          viewport={{ once: true }}   
+          viewport={{ once: true }}
         >
           {resultContent.map((word, i) => (
             <motion.span
@@ -100,7 +85,7 @@ const ReviewsSection = () => {
                 duration: 0.25,
                 delay: i / 10,
               }}
-              viewport={{ once: true }}   
+              viewport={{ once: true }}
             >
               {word}&nbsp;
             </motion.span>

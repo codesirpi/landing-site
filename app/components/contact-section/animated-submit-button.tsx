@@ -11,10 +11,9 @@ const AnimatedSubmitButton = () => {
       initial={{ opacity: 0 }}
       animate={{ opacity: [0, 5, 0] }}
       transition={{
-        duration: 1,
+        duration: 0.8,
         ease: "easeInOut",
         repeat: Infinity,
-        delay: 2,
       }}
     >
       <g opacity="0.29" filter="url(#filter0_f_12_250)">

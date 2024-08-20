@@ -47,7 +47,7 @@ const ContactSection = () => {
         </div>
       </motion.div>
       <motion.div
-        className="my-8 text-center text-xl text-grey-800 xs:text-2xl sm:text-3xl lg:text-5xl"
+        className="my-4 text-center text-xl text-grey-800 xs:text-2xl xs:my-8 sm:text-3xl lg:text-5xl"
         initial={{ y: 100, opacity: 0 }}
         whileInView={{
           y: 0,
@@ -96,7 +96,12 @@ const ContactSection = () => {
               onChange={(e) => {
                 setInput({ ...input, name: e.target.value });
               }}
-              whileTap={{ scale: 1.1 }}
+              whileTap={{
+                scale: 1.1,
+                transition: {
+                  duration: 0.1,
+                },
+              }}
             />
           </motion.div>
 
@@ -120,7 +125,12 @@ const ContactSection = () => {
               onChange={(e) => {
                 setInput({ ...input, email: e.target.value });
               }}
-              whileTap={{ scale: 1.1 }}
+              whileTap={{
+                scale: 1.1,
+                transition: {
+                  duration: 0.1,
+                },
+              }}
             />
             {state.errors && (
               <div className="flex items-center">
@@ -145,12 +155,17 @@ const ContactSection = () => {
         >
           <motion.textarea
             id="message"
-            className="placeholder:text-grey-600 bg-input-box border-0 rounded-[28px]  h-32 w-[100%] px-5 py-2 mt-8"
+            className="placeholder:text-grey-600 bg-input-box border-0 rounded-[28px] h-24 xs:h-32 w-[100%] px-5 py-2 mt-5 xs:mt-8"
             placeholder="Please tell us a brief about your project"
             onChange={(e) => {
               setInput({ ...input, message: e.target.value });
             }}
-            whileTap={{ scale: 1.1 }}
+            whileTap={{
+              scale: 1.05,
+              transition: {
+                duration: 0.1,
+              },
+            }}
           />
         </motion.div>
 
@@ -180,11 +195,11 @@ const ContactSection = () => {
             opacity: 1,
           }}
           transition={{
-            duration: 0.7,
+            duration: 0.1,
           }}
           viewport={{ once: true }}
         >
-          <div className="absolute w-10 left-0">
+          <div className="absolute w-full left-0">
             <AnimatedSubmitButton />
           </div>
           <Image

@@ -30,31 +30,33 @@ const services = [
 
 export const ServiceProviderSection = () => {
   return (
-    <motion.div className="flex flex-col w-full">
-      <motion.div
-        initial={{
-          y: 5,
-          opacity: 0,
-        }}
-        whileInView={{
-          y: 0,
-          opacity: 1,
-        }}
-        transition={{
-          duration: 0.7,
-        }}
-        viewport={{
-          once: true,
-        }}
-        className="flex flex-col bg-white w-full items-center justify-center px-2"
-      >
-        <div className="my-6 text-violet-700 font-medium text-xl ">
-          What we do?
-        </div>
-        <div className="flex justify-center items-center flex-col lg:font-extrabold text-center font-bold lg:text-3xl text-wrap sm:text-xl text-grey-700 ">
-          Expertly crafting and designing solutions that <br />
-          meet your needs
-        </div>
+    <div className="flex flex-col w-full">
+      <div className="flex flex-col bg-white w-full items-center justify-center px-2 z-30">
+        <motion.div
+          initial={{
+            y: 50,
+            opacity: 0,
+          }}
+          whileInView={{
+            y: 0,
+            opacity: 1,
+          }}
+          transition={{
+            duration: 0.7,
+          }}
+          viewport={{
+            once: true,
+          }}
+          className="text-center"
+        >
+          <div className="my-6 text-violet-700 font-medium text-xl ">
+            What we do?
+          </div>
+          <div className="flex justify-center items-center flex-col lg:font-extrabold text-center font-bold lg:text-3xl text-wrap sm:text-xl text-grey-700 ">
+            Expertly crafting and designing solutions that <br />
+            meet your needs
+          </div>
+        </motion.div>
 
         {/* show Projects provider component */}
         <div className="grid grid-cols-1 items-center my-8">
@@ -68,11 +70,11 @@ export const ServiceProviderSection = () => {
             />
           ))}
         </div>
-      </motion.div>
+      </div>
 
       <div className="flex w-full bg-blue-wave h-20 bg-cover bg-white">
         {/* <Image src={WaveImage} alt="wave" /> */}
       </div>
-    </motion.div>
+    </div>
   );
 };
