@@ -19,7 +19,7 @@ const HeroSection = () => {
   };
 
   return (
-    <div className="w-full h-[1191px] relative  linear-gradient-hero-section flex flex-col items-center  -z-50 ">
+    <div className="w-full h-screen relative  linear-gradient-hero-section flex flex-col items-center  -z-50 ">
       <div className="w-full  absolute bg-transparent top-0 z-20  h-[100px] flex items-center gap-2 pl-12 ">
         <div className="flex items-center">
           <Image
@@ -35,9 +35,19 @@ const HeroSection = () => {
         </span>
       </div>
 
-      <div className="absolute w-full top-4 left-4 z-20 h-full bg-cover bg-center bg-no-repeat">
-        <AnimatedSparkleSvg />
-      </div>
+      <motion.div
+        className="md:mt-8  absolute w-full   top-4 left-4 z-20 h-full bg-cover bg-hero-sparkle-star bg-center bg-no-repeat"
+        initial={{ opacity: 0 }}
+        animate={{ opacity: [0, 1, 0] }}
+        transition={{
+          duration: 1.5,
+          ease: "easeInOut",
+          repeat: Infinity,
+          delay: 1,
+        }}
+      >
+        {/* <AnimatedSparkleSvg /> */}
+      </motion.div>
 
       <div className=" mt-20 absolute h-[620px] lg:w-[1187px] z-20  flex flex-col items-center  justify-center  gap-[10px]">
         <span className=" font-bold text-xl md:text-7xl  text-center text-gradient  ">
