@@ -3,9 +3,9 @@ import { motion } from "framer-motion";
 const AnimatedSubmitButton = () => {
   return (
     <motion.svg
-      width="142"
+      width="98%"
       height="40"
-      viewBox="0 0 142 40"
+      viewBox="0 0 98% 40"
       fill="#5E0BEF"
       xmlns="http://www.w3.org/2000/svg"
       initial={{ opacity: 0 }}
