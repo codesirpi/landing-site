@@ -6,7 +6,7 @@ import WebDesignSVG from "../../assets/service-provider-sections/web-design.svg"
 import MVPBuilderSVG from "../../assets/service-provider-sections/mvp-builder.svg";
 import DataVisualizationSVG from "../../assets/service-provider-sections/data-visualization.svg";
 import WaveImage from "../../assets/wave.svg";
-import { motion, useInView } from "framer-motion";
+import { motion } from "framer-motion";
 
 const services = [
   {
@@ -30,11 +30,11 @@ const services = [
 
 export const ServiceProviderSection = () => {
   return (
-    <div className="flex flex-col w-full">
-      <div className="flex flex-col bg-white w-full items-center justify-center px-2 z-30">
+    <div className="flex flex-col w-full h-full relative py-20 bg-white z-30">
+      <div className="flex flex-col bg-white w-full items-center justify-center px-10">
         <motion.div
           initial={{
-            y: 50,
+            y: 5,
             opacity: 0,
           }}
           whileInView={{
@@ -47,19 +47,17 @@ export const ServiceProviderSection = () => {
           viewport={{
             once: true,
           }}
-          className="text-center"
         >
           <div className="my-6 text-violet-700 font-medium text-xl ">
             What we do?
           </div>
-          <div className="flex justify-center items-center flex-col lg:font-extrabold text-center font-bold lg:text-3xl text-wrap sm:text-xl text-grey-700 ">
-            Expertly crafting and designing solutions that <br />
-            meet your needs
+          <div className="md:w-[60%] flex justify-center items-center flex-col lg:font-extrabold text-center font-bold lg:text-3xl text-wrap sm:text-xl text-grey-700 ">
+            Expertly crafting and designing solutions that meet your needs
           </div>
         </motion.div>
 
         {/* show Projects provider component */}
-        <div className="grid grid-cols-1 items-center my-8">
+        <div className="grid grid-cols-1 items-center py-8  gap-10 ">
           {services.map(({ title, imge, description }, index: number) => (
             <ServiceContainer
               key={title}
@@ -71,10 +69,7 @@ export const ServiceProviderSection = () => {
           ))}
         </div>
       </div>
-
-      <div className="flex w-full bg-blue-wave h-20 bg-cover bg-white">
-        {/* <Image src={WaveImage} alt="wave" /> */}
-      </div>
+      <div className=" bg-blue-wave w-full absolute bottom-0 bg-cover lg:bg-cover bg-no-repeat h-10 md:h-20"></div>
     </div>
   );
 };
