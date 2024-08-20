@@ -30,30 +30,31 @@ const services = [
 
 export const ServiceProviderSection = () => {
   return (
-    <div className="flex flex-col w-full h-full relative py-20 bg-white">
-      <motion.div
-        initial={{
-          y: 5,
-          opacity: 0,
-        }}
-        whileInView={{
-          y: 0,
-          opacity: 1,
-        }}
-        transition={{
-          duration: 0.7,
-        }}
-        viewport={{
-          once: true,
-        }}
-        className="flex flex-col bg-white w-full items-center justify-center px-10"
-      >
-        <div className="my-6 text-violet-700 font-medium text-xl ">
-          What we do?
-        </div>
-        <div className="md:w-[60%] flex justify-center items-center flex-col lg:font-extrabold text-center font-bold lg:text-3xl text-wrap sm:text-xl text-grey-700 ">
-          Expertly crafting and designing solutions that meet your needs
-        </div>
+    <div className="flex flex-col w-full h-full relative py-20 bg-white z-30">
+      <div className="flex flex-col bg-white w-full items-center justify-center px-10">
+        <motion.div
+          initial={{
+            y: 5,
+            opacity: 0,
+          }}
+          whileInView={{
+            y: 0,
+            opacity: 1,
+          }}
+          transition={{
+            duration: 0.7,
+          }}
+          viewport={{
+            once: true,
+          }}
+        >
+          <div className="my-6 text-violet-700 font-medium text-xl ">
+            What we do?
+          </div>
+          <div className="md:w-[60%] flex justify-center items-center flex-col lg:font-extrabold text-center font-bold lg:text-3xl text-wrap sm:text-xl text-grey-700 ">
+            Expertly crafting and designing solutions that meet your needs
+          </div>
+        </motion.div>
 
         {/* show Projects provider component */}
         <div className="grid grid-cols-1 items-center py-8  gap-10 ">
@@ -67,7 +68,7 @@ export const ServiceProviderSection = () => {
             />
           ))}
         </div>
-      </motion.div>
+      </div>
       <div className=" bg-blue-wave w-full absolute bottom-0 bg-cover lg:bg-cover bg-no-repeat h-10 md:h-20"></div>
     </div>
   );
