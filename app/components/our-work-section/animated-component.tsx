@@ -82,8 +82,8 @@ const Carousel = ({
       filter: "brightness(40%)",
       scale: 1,
       backgroundImage: Data[leftId],
+      boxShadow: "0px 0px 0px 0px #FFFFFF",
       zIndex: "4",
-      boxShadow: "unset",
       transition: {
         type: "spring",
         duration: 1,
@@ -95,7 +95,7 @@ const Carousel = ({
       opacity: 1,
       filter: "brightness(40%)",
       scale: 1,
-      boxShadow: "unset",
+      boxShadow: "0px 0px 0px 0px #FFFFFF",
       zIndex: "3",
       transition: {
         type: "spring",

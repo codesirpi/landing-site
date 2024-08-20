@@ -170,7 +170,7 @@ const ContactSection = () => {
         </motion.div>
 
         <motion.button
-          className="py-2 px-9 rounded-full border-4 border-violet-700 bg-button-background mt-8 mb-5 hover:cursor-pointer flex items-center relative"
+          className="py-2 px-5 rounded-full border-4 border-violet-700 bg-button-background mt-8 mb-5 hover:cursor-pointer flex items-center relative xs:px-9"
           disabled={state.submitting}
           onClick={() =>
             handleSubmit({

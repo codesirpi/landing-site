@@ -33,6 +33,7 @@ export const ServiceProviderSection = () => {
     <div className="flex flex-col w-full h-full relative py-20 bg-white z-30">
       <div className="flex flex-col bg-white w-full items-center justify-center px-10">
         <motion.div
+          className=" flex flex-col items-center"
           initial={{
             y: 5,
             opacity: 0,
