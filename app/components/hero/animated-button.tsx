@@ -3,18 +3,17 @@ import { motion } from "framer-motion";
 const AnimatedGetStartedButton = () => {
   return (
     <motion.svg
-      width="181"
+      width="95%"
       height="40"
-      viewBox="0 0 181 40"
+      viewBox="0 0 95% 40"
       fill="#5E0BEF"
       xmlns="http://www.w3.org/2000/svg"
       initial={{ opacity: 0 }}
       animate={{ opacity: [0, 8, 0] }}
       transition={{
-        duration: 1,
+        duration: 0.8,
         ease: "easeInOut",
         repeat: Infinity,
-        delay: 2,
       }}
     >
       <g opacity="0.29" filter="url(#filter0_f_12_250)">

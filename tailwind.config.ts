@@ -32,7 +32,7 @@ const config: Config = {
         },
         "background-black": "#101010",
         "input-box": "#303030",
-        "submit-background": "#291A4B",
+        "button-background": "#291A4B",
       },
       boxShadow: {
         xl: "-2px -4px 10px 0 #FFFFFF",
