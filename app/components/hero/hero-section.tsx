@@ -45,7 +45,7 @@ const HeroSection = () => {
           </motion.span>
         </div>
         <motion.button
-          className=" mt-2 py-2 px-5 rounded-full border-4 border-violet-700 bg-button-background hover:cursor-pointer flex items-center relative xs:mt-0 xs:px-9"
+          className=" mt-2 py-2 px-5 rounded-full border-4 text-white border-violet-700 bg-button-background hover:cursor-pointer flex items-center relative xs:mt-0 xs:px-9"
           initial={{ y: 30, opacity: 0 }}
           whileTap={{
             scale: 0.9,

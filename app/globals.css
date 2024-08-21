@@ -40,6 +40,7 @@ body {
     #0f0f0f 100%
   );
 }
+
 .text-gradient {
   background: linear-gradient(
   to bottom,
@@ -87,6 +88,11 @@ background-image: linear-gradient(
   background-clip: text;
   color: transparent;
 }
+
+.image-clip{
+  clip-path: inset(1% 0 0 0);
+}
+
 .carousel-wrapper {
   display: grid;
   place-content: center;

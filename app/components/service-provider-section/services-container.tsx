@@ -3,6 +3,7 @@ import Image, { StaticImageData } from "next/image";
 import clsx from "clsx";
 import WebDesign from "../../assets/service-provider-sections/web-design.svg";
 import { motion, useInView } from "framer-motion";
+import "../../globals.css";
 
 type ServiceContainerProps = {
   title: string;
@@ -33,14 +34,17 @@ export const ServiceContainer = ({
         },
       }}
       viewport={{ once: true }}
-      className={clsx("flex flex-col lg:shadow-none shadow-lg p-8 lg:p-0 rounded-lg lg:rounded-none ", {
-        "lg:flex-row-reverse gap-10 lg:gap-0": isCardIsEven,
-        "lg:flex-row gap-10": !isCardIsEven,
-      })}
+      className={clsx(
+        "flex flex-col lg:shadow-none shadow-lg p-8 lg:p-0 rounded-lg lg:rounded-none ",
+        {
+          "lg:flex-row-reverse gap-10 lg:gap-0": isCardIsEven,
+          "lg:flex-row gap-10": !isCardIsEven,
+        }
+      )}
     >
       {/* image section*/}
       <div className="flex overflow-hidden lg:w-[50%] md:justify-center">
-        <Image src={image} alt={title} className=" object-cover" />
+        <Image src={image} alt={title} className=" object-cover image-clip" />
       </div>
       {/*description and title section*/}
       <div
