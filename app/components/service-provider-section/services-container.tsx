@@ -33,7 +33,7 @@ export const ServiceContainer = ({
         },
       }}
       viewport={{ once: true }}
-      className={clsx("flex flex-col ", {
+      className={clsx("flex flex-col lg:shadow-none shadow-lg p-8 lg:p-0 rounded-lg lg:rounded-none ", {
         "lg:flex-row-reverse gap-10 lg:gap-0": isCardIsEven,
         "lg:flex-row gap-10": !isCardIsEven,
       })}
