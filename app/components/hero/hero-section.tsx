@@ -83,8 +83,8 @@ const HeroSection = () => {
       </div>
       <motion.div
         className="absolute top-24 z-30  -left-4 bg-hero-vector h-full w-full bg-cover bg-center bg-no-repeat "
-        initial={{ rotate: 0 }}
-        animate={{ rotate: 90 }}
+        initial={{ backgroundPosition: "0% 0%" }}
+        animate={{ backgroundPosition: ["0% 0%", "100% 100%", "0% 0%"] }}
         transition={{
           duration: 30,
           repeat: Infinity,
