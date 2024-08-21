@@ -82,7 +82,7 @@ const HeroSection = () => {
         </motion.button>
       </div>
       <motion.div
-        className="absolute top-24 z-30  -left-4 bg-hero-vector h-full w-full bg-cover bg-center bg-no-repeat "
+        className="absolute top-24 z-30 -rotate-6  -left-12 bg-hero-vector h-full w-full bg-cover bg-center bg-no-repeat "
         initial={{ backgroundPosition: "0% 0%" }}
         animate={{ backgroundPosition: ["0% 0%", "100% 100%", "0% 0%"] }}
         transition={{
