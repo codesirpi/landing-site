@@ -24,7 +24,7 @@ const Testimonal = ({ mockData }: { mockData: MockData[] }) => {
             x: "-100%",
           }}
           transition={{
-            duration: 12,
+            duration: 22,
             repeat: Infinity,
             repeatType: "loop",
             ease: "linear",
@@ -85,7 +85,7 @@ const Testimonal = ({ mockData }: { mockData: MockData[] }) => {
             x: "-100%",
           }}
           transition={{
-            duration: 12,
+            duration: 22,
             repeat: Infinity,
             repeatType: "loop",
             ease: "linear",

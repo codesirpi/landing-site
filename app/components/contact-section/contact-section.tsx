@@ -230,7 +230,7 @@ const ContactSection = () => {
         }}
         viewport={{ once: true }}
       >
-        2024 CodeSirpi Software LLP
+        &copy; 2021-2024 CodeSirpi Software LLP
       </motion.div>
     </div>
   );
