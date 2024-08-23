@@ -32,7 +32,7 @@ const HeroSection = () => {
 
       <div className="absolute h-screen lg:w-[1187px] z-40  flex flex-col items-center  justify-center gap-2 xs:gap-7">
         <span className=" font-bold text-[22px] xs:text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl  text-center text-gradient">
-          We scultpure ideas to code for&nbsp;
+          We sculpt ideas to code for&nbsp;
           <span className="text-white block">
             digital platform & experience
           </span>
@@ -82,7 +82,7 @@ const HeroSection = () => {
         </motion.button>
       </div>
       <motion.div
-        className="absolute md:top-24 z-30  top-0 md:-rotate-6 left-0  md:-left-12 bg-hero-vector h-full w-full bg-cover bg-center bg-no-repeat "
+        className="absolute md:top-24 z-30  top-0 left-0  md:-left-12 bg-hero-vector h-full w-full bg-cover bg-center bg-no-repeat "
         initial={{ backgroundPosition: "0% 0%" }}
         animate={{ backgroundPosition: ["0% 0%", "100% 100%", "0% 0%"] }}
         transition={{
