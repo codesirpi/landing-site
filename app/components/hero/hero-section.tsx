@@ -38,7 +38,7 @@ const HeroSection = () => {
           </span>
         </span>
         <div>
-          <motion.span className="text-violet-700 text-center text-base xs:text-lg sm:text-xl md:text-2xl px-8">
+          <motion.span className="text-grey-200 text-center text-base xs:text-lg sm:text-xl md:text-2xl px-8">
             <span>Your partner for&nbsp;</span>
             <AnimatedRedo />
             <CursorBlinker />
