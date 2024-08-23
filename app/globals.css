@@ -43,10 +43,10 @@ body {
 
 .text-gradient {
   background: linear-gradient(
-  to bottom,
-  rgba(192, 191, 255, 1) 0%, 
-  rgba(255, 255, 255, 0.9) 100% 
-);
+    to bottom,
+    rgba(192, 191, 255, 1) 0%,
+    rgba(255, 255, 255, 0.9) 100%
+  );
   -webkit-background-clip: text;
   background-clip: text;
   color: transparent;
@@ -58,21 +58,22 @@ body {
   background: linear-gradient(#122837 0%, #5e0bef 100%);
 }
 .linear-gradient-hero-section {
-background-image: linear-gradient(
-  to bottom,
-  rgba(15, 15, 15, 0.95) 0%, 
-  rgba(41, 41, 41, 1) 54%, 
-  rgba(71, 71, 71, 0.9) 80%, 
-  rgba(133, 133, 133, 0.9) 100%
-);
+  background-image: linear-gradient(
+    to bottom,
+    #0f0f0f 95%,
+    #292929 54%,
+    #474747 80%,
+    #858585 100%
+  );
 }
 
 .linear-gradient-fade {
   mask-image: linear-gradient(
-    to right,rgba(0,0,0,0),
-    rgba(0,0,0,1) 20%,
-    rgba(0,0,0,1) 80%,
-    rgba(0,0,0,0)
+    to right,
+    rgba(0, 0, 0, 0),
+    rgba(0, 0, 0, 1) 20%,
+    rgba(0, 0, 0, 1) 80%,
+    rgba(0, 0, 0, 0)
   );
 }
 
@@ -89,7 +90,7 @@ background-image: linear-gradient(
   color: transparent;
 }
 
-.image-clip{
+.image-clip {
   clip-path: inset(1% 0 0 0);
 }
 
@@ -97,7 +98,6 @@ background-image: linear-gradient(
   display: grid;
   place-content: center;
   border-radius: 2rem;
-
 }
 .carousel-content {
   position: relative;
@@ -116,4 +116,3 @@ background-image: linear-gradient(
   border-radius: 5px;
   padding: 20px;
 }
-

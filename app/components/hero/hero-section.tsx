@@ -4,14 +4,14 @@ import Image from "next/image";
 import logo from "../../assets/logo.svg";
 import star from "../../assets/star.svg";
 import { motion } from "framer-motion";
-import AnimatedSparkleSvg from "./animated-sparkle";
+
 import AnimatedGetStartedButton from "./animated-button";
 import AnimatedRedo from "./animated-text";
 import CursorBlinker from "./cursor-blinker";
 const HeroSection = () => {
   return (
-    <div className="w-full h-screen relative linear-gradient-hero-section flex flex-col items-center">
-      <div className="z-20 w-full ml-11 my-7 md:ml-[5%] md:my-[2.5%] ">
+    <div className="w-full h-screen relative  z-10 linear-gradient-hero-section flex flex-col items-center">
+      <div className="absolute  z-20 w-full h-[100px] ml-11 my-7 md:ml-24 md:my-[2.5%] bg-transparent">
         <div>
           <Image
             src={logo}
@@ -25,12 +25,9 @@ const HeroSection = () => {
           </div>
         </div>
       </div>
-
-      <div className="absolute top-4 left-4 z-20 h-full bg-cover bg-center bg-no-repeat">
-        <AnimatedSparkleSvg />
-      </div>
-
-      <div className="absolute h-screen lg:w-[1187px] z-40  flex flex-col items-center  justify-center gap-2 xs:gap-7">
+      <div className="absolute z-10 left-0 opacity-10 -top-32  w-full h-full  bg-hero-top-vector bg-cover bg-center bg-no-repeat"></div>
+      <div className="top-4 left-4 absolute z-20 bg-hero-sparkle-star h-full w-full bg-cover bg-center bg-no-repeat"></div>
+      <div className=" h-screen  z-40  flex flex-col items-center  justify-center gap-2 xs:gap-7">
         <span className=" font-bold text-[22px] xs:text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl  text-center text-gradient">
           We sculpt ideas to code for&nbsp;
           <span className="text-white block">
@@ -45,7 +42,7 @@ const HeroSection = () => {
           </motion.span>
         </div>
         <motion.button
-          className=" mt-2 py-2 px-5 rounded-full border-4 text-white border-violet-700 bg-button-background hover:cursor-pointer flex items-center relative xs:mt-0 xs:px-9"
+          className=" mt-2 md:py-4 md:text-[18px] text-sm  px-2 py-2  md:px-5 rounded-full border-4 text-white  get-started-button-gradient  border-blue-600 bg-transparent hover:cursor-pointer flex items-center relative xs:mt-0 xs:px-9"
           initial={{ y: 30, opacity: 0 }}
           whileTap={{
             scale: 0.9,
@@ -81,10 +78,11 @@ const HeroSection = () => {
           Get Started
         </motion.button>
       </div>
+
       <motion.div
-        className="absolute md:top-24 z-30  top-0 left-0  md:-left-12 bg-hero-vector h-full w-full bg-cover bg-center bg-no-repeat "
+        className="absolute z-30  bg-hero-vector h-full w-full bg-cover bg-center bg-no-repeat "
         initial={{ backgroundPosition: "0% 0%" }}
-        animate={{ backgroundPosition: ["0% 0%", "100% 100%", "0% 0%"] }}
+        animate={{ backgroundPosition: ["0% 0%", "50% 50%", "0% 0%"] }}
         transition={{
           duration: 30,
           repeat: Infinity,
@@ -92,7 +90,7 @@ const HeroSection = () => {
         }}
       ></motion.div>
       <div className="absolute z-20 left-0 opacity-55   top-[10%] w-full h-full bg-hero-right-vector bg-cover bg-center bg-no-repeat"></div>
-      <div className="absolute z-10 left-0 opacity-10  -top-[25%] w-full h-full  bg-hero-top-vector bg-cover bg-center bg-no-repeat"></div>
+      <div className="absolute z-10 left-0 opacity-10  top-[25%] w-full h-full  bg-hero-top-vector bg-cover bg-center bg-no-repeat"></div>
     </div>
   );
 };
