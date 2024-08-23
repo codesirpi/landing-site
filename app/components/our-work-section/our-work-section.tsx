@@ -17,7 +17,7 @@ export const OurWorkSection = () => {
   return (
     <div className="w-full lg:h-screen xl:h-[800px] h-[800px] relative flex flex-col items-center  text-black ">
       <div className="w-full bg-gradient-to-b from-[#F0F8FE] to-[#FFFFFF] flex justify-center flex-col items-center gap-5 pb-10  ">
-        <div className="bg-gradient-to-l from-[#EDF1F2] to-[#545454] rounded-full w-20 h-20 items-center flex p-2  ">
+        <div className=" mt-8 bg-gradient-to-l from-[#EDF1F2] to-[#545454] rounded-full w-20 h-20 items-center flex p-2  ">
           <Image src={LightIcon} alt={"Idea-icon"} width={75} height={75} />
         </div>
         <div className="text-2xl text-violet-700 ">

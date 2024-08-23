@@ -70,7 +70,10 @@ export const ServiceProviderSection = () => {
           ))}
         </div>
       </div>
-      <div className=" bg-blue-wave w-full absolute bottom-0 bg-cover lg:bg-cover bg-no-repeat h-10 md:h-20"></div>
+      {/* <div className=" object-cover image-clip flex bg-blue-wave w-full absolute bottom-0 bg-cover lg:bg-cover bg-no-repeat h-10 md:h-20"></div> */}
+      <div className="flex overflow-hidden w-full bottom-0 absolute ">
+        <Image src={WaveImage} alt={""} className=" object-cover image-clip" />
+      </div>
     </div>
   );
 };
