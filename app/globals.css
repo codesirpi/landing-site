@@ -59,8 +59,7 @@ body {
 }
 .linear-gradient-hero-section {
   background-image: linear-gradient(
-    to bottom,
-    #0f0f0f 95%,
+    #0f0f0f 0%,
     #292929 54%,
     #474747 80%,
     #858585 100%
