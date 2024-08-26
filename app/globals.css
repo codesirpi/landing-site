@@ -61,8 +61,8 @@ body {
   background-image: linear-gradient(
     to bottom,
     #0f0f0f 95%,
-    #292929 54%,
-    #474747 80%,
+    #292929 100%,
+    #474747 100%,
     #858585 100%
   );
 }
